@@ -8,19 +8,22 @@
     "gatsby-link": "^1.6.21",
     "gatsby-plugin-react-helmet": "^1.0.5"
   },
-  "keywords": ["gatsby"],
+  "keywords": [
+    "gatsby"
+  ],
   "license": "MIT",
   "main": "n/a",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
     "flow": "flow --color=always",
-    "format":
-      "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js'",
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
     "flow-bin": "^0.57.3",
+    "gatsby-source-filesystem": "^1.5.5",
+    "gatsby-transformer-yaml": "^1.5.11",
     "prettier": "^1.7.4"
   }
 }

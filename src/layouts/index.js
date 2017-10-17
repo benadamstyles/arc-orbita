@@ -1,11 +1,13 @@
-import React from 'react'
+// @flow
+
+import React, {type Node} from 'react'
 import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 
 import './index.css'
 
-const TemplateWrapper = ({children}: {children: Function}) => (
+const TemplateWrapper = ({children}: {children: () => Node}) => (
   <div>
     <Helmet
       title="Arc Orbita"
