@@ -2,5 +2,5 @@ module.exports = {
   siteMetadata: {
     title: 'Arc Orbita',
   },
-  plugins: [`gatsby-plugin-react-helmet`],
+  plugins: ['gatsby-plugin-react-helmet'],
 }
