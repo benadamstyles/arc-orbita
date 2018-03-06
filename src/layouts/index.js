@@ -7,6 +7,12 @@ import Helmet from 'react-helmet'
 
 import './index.css'
 
+export const styles = {
+  container: {
+    padding: '1rem',
+  },
+}
+
 const TemplateWrapper = ({children}: {children: () => Node}) => (
   <div>
     <Helmet
@@ -16,12 +22,7 @@ const TemplateWrapper = ({children}: {children: () => Node}) => (
         {name: 'keywords', content: 'sample, something'},
       ]}
     />
-    <div
-      style={{
-        padding: '1rem',
-      }}>
-      {children()}
-    </div>
+    <div style={styles.container}>{children()}</div>
   </div>
 )
 
