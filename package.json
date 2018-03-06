@@ -5,6 +5,7 @@
   "version": "1.0.0",
   "author": "benstyles",
   "dependencies": {
+    "js-yaml-loader": "^0.1.0",
     "maybes": "^0.2.3",
     "next": "^5.0.0",
     "react": "^16.2.0",

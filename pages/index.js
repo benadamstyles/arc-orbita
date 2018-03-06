@@ -3,16 +3,17 @@
 import React from 'react'
 import Video from '../components/content/video'
 import Image from '../components/content/image'
-import {getYamlItems, type YamlData} from '../util/graphql'
 import DisplaceAbsolute from '../components/util/displace-absolute'
-import {styles as layoutStyles} from '../layouts/index'
-
-declare function graphql(string[]): Object
+import data from '../data/content.yml'
 
 type ContentType = 'video'
 type Content = {type: ContentType, src: string, thumb: string}
 
 const styles = {
+  container: {
+    padding: '1rem',
+  },
+
   page: {
     overflowX: 'scroll',
   },
@@ -39,7 +40,7 @@ const Intro = DisplaceAbsolute(
       <p style={styles.featureText}>Welcome to this Arc Orbita website.</p>
     </div>
   ),
-  layoutStyles.container
+  styles.container
 )
 
 const ContentContainer = ({items}: {items: $ReadOnlyArray<Content>}) => (
@@ -70,25 +71,11 @@ const ContentContainer = ({items}: {items: $ReadOnlyArray<Content>}) => (
   </div>
 )
 
-const IndexPage = ({data}: {data: YamlData<Content>}) => (
+const IndexPage = () => (
   <div style={styles.page}>
     <Intro />
-    <ContentContainer items={getYamlItems('content', data)} />
+    <ContentContainer items={data} />
   </div>
 )
 
 export default IndexPage
-
-export const query = graphql`
-  query IndexQuery {
-    allContentYaml {
-      edges {
-        node {
-          type
-          src
-          thumb
-        }
-      }
-    }
-  }
-`
