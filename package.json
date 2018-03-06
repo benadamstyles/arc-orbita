@@ -1,27 +1,21 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "arc-orbita",
+  "private": true,
+  "description": "Arc Orbita website",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "benstyles",
   "dependencies": {
-    "gatsby": "^1.9.223",
-    "gatsby-image": "^1.0.41",
-    "gatsby-link": "^1.6.38",
-    "gatsby-plugin-react-helmet": "^2.0.6",
-    "gatsby-plugin-sharp": "^1.6.38",
-    "gatsby-transformer-sharp": "^1.6.22",
     "maybes": "^0.2.3",
-    "react": "^15",
-    "react-helmet": "^5.2.0"
+    "next": "^5.0.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
   },
-  "keywords": [
-    "gatsby"
-  ],
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "build": "gatsby build",
-    "start": "gatsby develop",
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
     "flow": "flow --color=always",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js'",
     "lint": "eslint .",
@@ -39,8 +33,6 @@
     "eslint-plugin-react": "^7.7.0",
     "eslint-plugin-react-native": "^3.2.1",
     "flow-bin": "^0.66.0",
-    "gatsby-source-filesystem": "^1.5.26",
-    "gatsby-transformer-yaml": "^1.5.16",
     "prettier": "^1.11.1"
   }
 }
