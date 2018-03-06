@@ -4,9 +4,15 @@
   "version": "1.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
-    "gatsby": "^1.9.63",
-    "gatsby-link": "^1.6.21",
-    "gatsby-plugin-react-helmet": "^1.0.5"
+    "gatsby": "^1.9.223",
+    "gatsby-image": "^1.0.41",
+    "gatsby-link": "^1.6.38",
+    "gatsby-plugin-react-helmet": "^2.0.6",
+    "gatsby-plugin-sharp": "^1.6.38",
+    "gatsby-transformer-sharp": "^1.6.22",
+    "maybes": "^0.2.3",
+    "react": "^15",
+    "react-helmet": "^5.2.0"
   },
   "keywords": [
     "gatsby"
@@ -15,15 +21,26 @@
   "main": "n/a",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "start": "gatsby develop",
     "flow": "flow --color=always",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js'",
+    "lint": "eslint .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "flow-bin": "^0.57.3",
-    "gatsby-source-filesystem": "^1.5.5",
-    "gatsby-transformer-yaml": "^1.5.11",
-    "prettier": "^1.7.4"
+    "babel-eslint": "^8.2.2",
+    "eslint": "^4.18.2",
+    "eslint-config-mealsup": "^2.1.0",
+    "eslint-plugin-babel": "^4.1.2",
+    "eslint-plugin-eslint-comments": "^2.0.2",
+    "eslint-plugin-flowtype": "^2.46.1",
+    "eslint-plugin-fp": "^2.3.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-react": "^7.7.0",
+    "eslint-plugin-react-native": "^3.2.1",
+    "flow-bin": "^0.66.0",
+    "gatsby-source-filesystem": "^1.5.26",
+    "gatsby-transformer-yaml": "^1.5.16",
+    "prettier": "^1.11.1"
   }
 }

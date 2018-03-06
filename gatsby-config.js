@@ -7,10 +7,12 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: `data`,
+        name: 'data',
         path: `${__dirname}/src/data/`,
       },
     },
     'gatsby-transformer-yaml',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
   ],
 }
