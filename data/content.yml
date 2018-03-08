@@ -4,15 +4,19 @@
 - type: video
   src: https://player.vimeo.com/video/125344630
   thumb: https://i.vimeocdn.com/video/515413039.jpg?mw=1920&mh=1019
+  mainColor: black
 
 - type: video
   src: https://player.vimeo.com/video/86240806
   thumb: https://i.vimeocdn.com/video/463840758.jpg?mw=1920&mh=1019
+  mainColor: rgb(217, 184, 155)
 
 - type: video
   src: https://player.vimeo.com/video/129402751
   thumb: https://i.vimeocdn.com/video/520872335.jpg?mw=1920&mh=1019
+  mainColor: rgb(175, 179, 160)
 
 - type: video
   src: https://player.vimeo.com/video/175580614
   thumb: https://i.vimeocdn.com/video/582675076.jpg?mw=1920&mh=1019
+  mainColor: black
