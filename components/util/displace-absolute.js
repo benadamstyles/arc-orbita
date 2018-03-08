@@ -18,8 +18,8 @@ const styles = {
 const DisplaceAbsolute = (
   position: 'absolute' | 'fixed',
   Component: ComponentType<*>,
-  style: Object,
-  wrapperStyle?: Object
+  style: {},
+  wrapperStyle?: {}
 ) => () => (
   <div style={{...styles.wrapper, ...wrapperStyle}}>
     <Component style={styles.invisible} />

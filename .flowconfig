@@ -6,5 +6,17 @@
 
 [lints]
 all=warn
+untyped-import=off
 
 [options]
+include_warnings=true
+munge_underscores=true
+
+module.file_ext=.js
+module.file_ext=.jsx
+module.file_ext=.json
+module.file_ext=.yml
+module.file_ext=.yaml
+
+[version]
+^0.66

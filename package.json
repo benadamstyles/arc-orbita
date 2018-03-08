@@ -9,7 +9,9 @@
     "maybes": "^0.2.3",
     "next": "^5.0.0",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "styled-components": "^3.2.0",
+    "unstated": "^1.0.3"
   },
   "license": "MIT",
   "main": "n/a",
@@ -18,7 +20,8 @@
     "build": "next build",
     "start": "next start",
     "flow": "flow --color=always",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js'",
+    "glow": "glow --watch !node_modules/*",
+    "flow-typed": "flow-typed install --skip",
     "lint": "eslint .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -34,6 +37,8 @@
     "eslint-plugin-react": "^7.7.0",
     "eslint-plugin-react-native": "^3.2.1",
     "flow-bin": "^0.66.0",
+    "flow-typed": "^2.3.0",
+    "glow": "^1.2.2",
     "prettier": "^1.11.1"
   }
 }

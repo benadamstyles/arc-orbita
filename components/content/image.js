@@ -1,45 +1,34 @@
 // @flow
 
-import React, {PureComponent} from 'react'
-import QueryImage from '../query/images'
-declare function graphql(string[]): Object
+import React from 'react'
+import {Subscribe} from 'unstated'
+import styled from 'styled-components'
+import ScrollContainer from '../higher-order/scroll'
 
-const width = 560
-const height = 315
+const ImageContainer = styled.div`
+  width: 560px;
+  height: 315px;
+  margin-bottom: ${({isLastItem}: {isLastItem: boolean}) =>
+    isLastItem ? '0' : '10em'};
+`
 
-const styles = {
-  video: {
-    backgroundColor: 'black',
-    position: 'relative',
-    overflow: 'hidden',
-    width,
-    height,
-    // borderRadius: '50%',
-    zIndex: 1,
-  },
-  iframe: {
-    position: 'relative',
-    marginBottom: 0,
-    zIndex: -1,
-  },
-}
+export const ImageElement = styled.img`
+  width: 100%;
+`
 
 type Props = {
-  data: Array<*>,
   src: string,
-  style: Object,
+  isLastItem: boolean,
 }
 
-export default class Image extends PureComponent<Props> {
-  render() {
-    return (
-      <div style={this.props.style}>
-        <div style={styles.video}>
-          <QueryImage name={this.props.src}>
-            {url => <img src={url} />}
-          </QueryImage>
-        </div>
-      </div>
-    )
-  }
-}
+const Image = ({src, isLastItem}: Props) => (
+  <Subscribe to={[ScrollContainer]}>
+    {({state: {scrollY}}) => (
+      <ImageContainer isLastItem={isLastItem}>
+        <p>{scrollY}</p>
+        <ImageElement src={`/static/images/${src}`} />
+      </ImageContainer>
+    )}
+  </Subscribe>
+)
+export default Image

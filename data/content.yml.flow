@@ -1,0 +1,17 @@
+// @flow
+
+type Video = $ReadOnly<{|
+  type: 'video',
+  src: string,
+  thumb: string,
+  mainColor: string
+|}>
+
+type Image = $ReadOnly<{|
+  type: 'image',
+  src: string,
+|}>
+
+type ContentUnion = Video | Image
+
+declare module.exports: $ReadOnlyArray<ContentUnion>

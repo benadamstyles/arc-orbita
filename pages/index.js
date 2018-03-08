@@ -1,81 +1,63 @@
 // @flow
 
 import React from 'react'
+import styled from 'styled-components'
+import {Provider, Subscribe} from 'unstated'
 import Video from '../components/content/video'
 import Image from '../components/content/image'
 import DisplaceAbsolute from '../components/util/displace-absolute'
+import ScrollEvent from '../components/functionality/scroll-event'
 import data from '../data/content.yml'
+import ScrollContainer from '../components/higher-order/scroll'
 
-type ContentType = 'video'
-type Content = {type: ContentType, src: string, thumb: string}
-
-const styles = {
-  container: {
-    padding: '1rem',
-  },
-
-  page: {
-    overflowX: 'scroll',
-  },
-  content: {
-    display: 'table',
-  },
-  video: {
-    paddingRight: '10em',
-    display: 'table-cell',
-  },
-  lastItem: {
-    paddingRight: 0,
-  },
-  featureText: {
-    color: '#be3a34',
-  },
-}
+const FeatureText = styled.p`
+  color: #be3a34;
+`
 
 const Intro = DisplaceAbsolute(
   'fixed',
   ({style}) => (
     <div style={style}>
       <h1>Orbita</h1>
-      <p style={styles.featureText}>Welcome to this Arc Orbita website.</p>
+      <FeatureText>Welcome to this Arc Orbita website.</FeatureText>
     </div>
   ),
-  styles.container
+  {padding: '1rem'}
 )
 
-const ContentContainer = ({items}: {items: $ReadOnlyArray<Content>}) => (
-  <div style={styles.content}>
+const ContentWrapper = ({items}) => (
+  <div>
     {items.map(
-      ({src, thumb, type}, i, {length}) =>
-        type === 'video' ? (
+      (item, i, {length}) =>
+        item.type === 'video' ? (
           <Video
-            key={src}
-            src={src}
-            thumb={thumb}
-            style={{
-              ...styles.video,
-              ...(i === length - 1 ? styles.lastItem : {}),
-            }}
+            key={item.src}
+            src={item.src}
+            thumb={item.thumb}
+            mainColor={item.mainColor}
+            isLastItem={i === length - 1}
           />
         ) : (
-          <Image
-            key={src}
-            src={src}
-            style={{
-              ...styles.video,
-              ...(i === length - 1 ? styles.lastItem : {}),
-            }}
-          />
+          <Image key={item.src} src={item.src} isLastItem={i === length - 1} />
         )
     )}
   </div>
 )
 
+const Wrapper = styled.div`
+  padding: 1rem;
+`
+
 const IndexPage = () => (
-  <div style={styles.page}>
-    <Intro />
-    <ContentContainer items={data} />
-  </div>
+  <Provider>
+    <Subscribe to={[ScrollContainer]}>
+      {scroll => <ScrollEvent callback={scroll.updateScrollY} />}
+    </Subscribe>
+    <Wrapper>
+      <Intro />
+      <ContentWrapper items={data} />
+    </Wrapper>
+  </Provider>
 )
 
 export default IndexPage
