@@ -3,11 +3,11 @@
 import React, {PureComponent} from 'react'
 import {Subscribe} from 'unstated'
 import styled from 'styled-components'
+import pure from 'recompose/pure'
 import ScrollContainer from '../higher-order/scroll'
 import {ImageElement} from './image'
 
 const VideoContainer = styled.div`
-  /* background-color: black; */
   position: relative;
   overflow: hidden;
   width: 560px;
@@ -17,11 +17,11 @@ const VideoContainer = styled.div`
     isLastItem ? '0' : '10em'};
 `
 
-const Iframe = styled.iframe`
+const Iframe = pure(styled.iframe`
   position: relative;
   margin-bottom: 0;
   z-index: -1;
-`
+`)
 
 type Props = {
   src: string,
@@ -40,7 +40,7 @@ export default class Video extends PureComponent<Props, State> {
   render() {
     return (
       <Subscribe to={[ScrollContainer]}>
-        {({state: {scrollY}}) => (
+        {scroll => (
           <div>
             {this.state.expanded ? (
               <VideoContainer style={{backgroundColor: this.props.mainColor}}>

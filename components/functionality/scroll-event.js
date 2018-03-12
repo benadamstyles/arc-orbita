@@ -7,8 +7,18 @@ type Props = {
 }
 
 export default class ScrollEvent extends PureComponent<Props> {
+  working = false
+
+  act = () => {
+    this.props.callback(window.pageYOffset)
+    this.working = false
+  }
+
   handleScroll = () => {
-    this.props.callback(window.scrollY)
+    if (!this.working) {
+      this.working = true
+      requestAnimationFrame(this.act)
+    }
   }
 
   componentDidMount() {

@@ -1,20 +1,47 @@
 // @flow
 
-import React from 'react'
+import React, {PureComponent, type Node} from 'react'
 import {Subscribe} from 'unstated'
 import styled from 'styled-components'
+import pure from 'recompose/pure'
 import ScrollContainer from '../higher-order/scroll'
+import ScrollScale from '../styled/scroll-scale'
 
-const ImageContainer = styled.div`
-  width: 560px;
+type ImageContainerProps = {
+  isLastItem: boolean,
+  scrollY: number,
+  children: Node,
+}
+
+const ImageContainerStyled = ScrollScale.extend`
   height: 315px;
-  margin-bottom: ${({isLastItem}: {isLastItem: boolean}) =>
+  width: 560px;
+  margin-bottom: ${({isLastItem}: ImageContainerProps) =>
     isLastItem ? '0' : '10em'};
 `
 
-export const ImageElement = styled.img`
+class ImageContainer extends PureComponent<ImageContainerProps, {top: number}> {
+  state = {top: 0}
+
+  ref = el =>
+    el &&
+    this.setState({top: el.getBoundingClientRect().top + window.pageYOffset})
+
+  render() {
+    return (
+      <ImageContainerStyled
+        innerRef={this.ref}
+        {...this.props}
+        top={this.state.top}>
+        {this.props.children}
+      </ImageContainerStyled>
+    )
+  }
+}
+
+export const ImageElement = pure(styled.img`
   width: 100%;
-`
+`)
 
 type Props = {
   src: string,
@@ -23,9 +50,8 @@ type Props = {
 
 const Image = ({src, isLastItem}: Props) => (
   <Subscribe to={[ScrollContainer]}>
-    {({state: {scrollY}}) => (
-      <ImageContainer isLastItem={isLastItem}>
-        <p>{scrollY}</p>
+    {scroll => (
+      <ImageContainer scrollY={scroll.state.scrollY} isLastItem={isLastItem}>
         <ImageElement src={`/static/images/${src}`} />
       </ImageContainer>
     )}

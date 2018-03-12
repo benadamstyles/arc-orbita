@@ -3,12 +3,18 @@
 import React from 'react'
 import styled from 'styled-components'
 import {Provider, Subscribe} from 'unstated'
+import pure from 'recompose/pure'
 import Video from '../components/content/video'
 import Image from '../components/content/image'
 import DisplaceAbsolute from '../components/util/displace-absolute'
 import ScrollEvent from '../components/functionality/scroll-event'
 import data from '../data/content.yml'
 import ScrollContainer from '../components/higher-order/scroll'
+
+if (process.env.NODE_ENV !== 'production') {
+  const {whyDidYouUpdate} = require('why-did-you-update')
+  whyDidYouUpdate(React, {exclude: [/^Subscribe$/, /^Consumer$/]})
+}
 
 const FeatureText = styled.p`
   color: #be3a34;
@@ -25,7 +31,7 @@ const Intro = DisplaceAbsolute(
   {padding: '1rem'}
 )
 
-const ContentWrapper = ({items}) => (
+const ContentWrapper = pure(({items}) => (
   <div>
     {items.map(
       (item, i, {length}) =>
@@ -42,7 +48,7 @@ const ContentWrapper = ({items}) => (
         )
     )}
   </div>
-)
+))
 
 const Wrapper = styled.div`
   padding: 1rem;
