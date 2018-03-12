@@ -1,22 +1,55 @@
 - type: image
+  name: artura
   src: artura.jpeg
 
+- type: image
+  name: b-y
+  src: b-y.jpeg
+
+- type: image
+  name: stereo
+  src: stereo.jpeg
+
+- type: image
+  name: tal
+  src: tal.jpeg
+
+- type: image
+  name: semions
+  src: semions.jpeg
+
+- type: image
+  name: semions-int
+  src: semions-int.jpeg
+
+- type: image
+  name: z-magnet
+  src: z-magnet.jpeg
+
+- type: image
+  name: zorzs
+  src: zorzs.jpeg
+
 - type: video
+  name: '125344630'
   src: https://player.vimeo.com/video/125344630
   thumb: https://i.vimeocdn.com/video/515413039.jpg?mw=1920&mh=1019
   mainColor: black
 
 - type: video
+  name: '86240806'
   src: https://player.vimeo.com/video/86240806
   thumb: https://i.vimeocdn.com/video/463840758.jpg?mw=1920&mh=1019
   mainColor: rgb(217, 184, 155)
 
 - type: video
+  name: '129402751'
   src: https://player.vimeo.com/video/129402751
   thumb: https://i.vimeocdn.com/video/520872335.jpg?mw=1920&mh=1019
   mainColor: rgb(175, 179, 160)
 
 - type: video
+  name: '175580614'
   src: https://player.vimeo.com/video/175580614
   thumb: https://i.vimeocdn.com/video/582675076.jpg?mw=1920&mh=1019
   mainColor: black

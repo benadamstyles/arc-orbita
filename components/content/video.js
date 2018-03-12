@@ -1,10 +1,7 @@
 // @flow
 
 import React, {PureComponent} from 'react'
-import {Subscribe} from 'unstated'
 import styled from 'styled-components'
-import pure from 'recompose/pure'
-import ScrollContainer from '../higher-order/scroll'
 import {ImageElement} from './image'
 
 const VideoContainer = styled.div`
@@ -17,11 +14,11 @@ const VideoContainer = styled.div`
     isLastItem ? '0' : '10em'};
 `
 
-const Iframe = pure(styled.iframe`
+const Iframe = styled.iframe`
   position: relative;
   margin-bottom: 0;
   z-index: -1;
-`)
+`
 
 type Props = {
   src: string,
@@ -39,27 +36,23 @@ export default class Video extends PureComponent<Props, State> {
 
   render() {
     return (
-      <Subscribe to={[ScrollContainer]}>
-        {scroll => (
-          <div>
-            {this.state.expanded ? (
-              <VideoContainer style={{backgroundColor: this.props.mainColor}}>
-                <Iframe
-                  width="560"
-                  height="315"
-                  src={this.props.src}
-                  frameBorder="0"
-                  allowFullScreen
-                />
-              </VideoContainer>
-            ) : (
-              <VideoContainer onClick={this.expand} onMouseOver={this.expand}>
-                <ImageElement src={this.props.thumb} />
-              </VideoContainer>
-            )}
-          </div>
+      <div>
+        {this.state.expanded ? (
+          <VideoContainer style={{backgroundColor: this.props.mainColor}}>
+            <Iframe
+              width="560"
+              height="315"
+              src={this.props.src}
+              frameBorder="0"
+              allowFullScreen
+            />
+          </VideoContainer>
+        ) : (
+          <VideoContainer onClick={this.expand} onMouseOver={this.expand}>
+            <ImageElement src={this.props.thumb} />
+          </VideoContainer>
         )}
-      </Subscribe>
+      </div>
     )
   }
 }

@@ -6,6 +6,7 @@
   "author": "benstyles",
   "dependencies": {
     "d3-interpolate": "^1.1.6",
+    "js-yaml": "^3.11.0",
     "js-yaml-loader": "^0.1.0",
     "lodash": "^4.17.5",
     "maybes": "^0.2.3",
@@ -13,6 +14,7 @@
     "rapt": "^1.2.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-reveal": "^1.2.1",
     "recompose": "^0.26.0",
     "styled-components": "^3.2.0",
     "unstated": "^1.0.3"
@@ -22,7 +24,6 @@
   "scripts": {
     "dev": "next",
     "build": "next build && next export",
-    "start": "next start",
     "flow": "flow --color=always",
     "glow": "glow --watch !node_modules/*",
     "flow-typed": "flow-typed install --skip",

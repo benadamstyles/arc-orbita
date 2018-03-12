@@ -2,6 +2,7 @@
 
 type Video = $ReadOnly<{|
   type: 'video',
+  name: string,
   src: string,
   thumb: string,
   mainColor: string
@@ -9,6 +10,7 @@ type Video = $ReadOnly<{|
 
 type Image = $ReadOnly<{|
   type: 'image',
+  name: string,
   src: string,
 |}>
 

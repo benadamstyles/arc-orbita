@@ -1,4 +1,13 @@
+// @flow
+
+const {promisify} = require('util')
+const fs = require('fs')
+const yaml = require('js-yaml')
+const rapt = require('rapt').default
+const fromPairs = require('lodash/fromPairs')
+
 module.exports = {
+  // $FlowIgnore
   webpack: config => {
     config.module.rules.push({
       test: /\.ya?ml$/,
@@ -6,12 +15,17 @@ module.exports = {
     })
     return config
   },
-  exportPathMap: () => ({
-    '/': {page: '/'},
-    // '/about': { page: '/about' },
-    // '/readme.md': { page: '/readme' },
-    // '/p/hello-nextjs': { page: '/post', query: { title: 'hello-nextjs' } },
-    // '/p/learn-nextjs': { page: '/post', query: { title: 'learn-nextjs' } },
-    // '/p/deploy-nextjs': { page: '/post', query: { title: 'deploy-nextjs' } }
-  }),
+  exportPathMap: () =>
+    rapt(promisify(fs.readFile)('./data/content.yml'))
+      .thenMap(yaml.safeLoad)
+      .thenMap(data =>
+        fromPairs(
+          data.map(({name}) => [`/${name}`, {page: '/item', query: {name}}])
+        )
+      )
+      .thenMap(pages => ({
+        '/': {page: '/'},
+        ...pages,
+      }))
+      .val(),
 }

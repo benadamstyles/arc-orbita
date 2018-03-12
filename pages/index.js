@@ -1,15 +1,12 @@
 // @flow
 
-import React from 'react'
+import React, {Fragment} from 'react'
 import styled from 'styled-components'
-import {Provider, Subscribe} from 'unstated'
-import pure from 'recompose/pure'
-import Video from '../components/content/video'
+import Fade from 'react-reveal/Fade'
+import rapt from 'rapt'
 import Image from '../components/content/image'
 import DisplaceAbsolute from '../components/util/displace-absolute'
-import ScrollEvent from '../components/functionality/scroll-event'
 import data from '../data/content.yml'
-import ScrollContainer from '../components/higher-order/scroll'
 
 if (process.env.NODE_ENV !== 'production') {
   const {whyDidYouUpdate} = require('why-did-you-update')
@@ -31,39 +28,40 @@ const Intro = DisplaceAbsolute(
   {padding: '1rem'}
 )
 
-const ContentWrapper = pure(({items}) => (
-  <div>
-    {items.map(
-      (item, i, {length}) =>
-        item.type === 'video' ? (
-          <Video
-            key={item.src}
-            src={item.src}
-            thumb={item.thumb}
-            mainColor={item.mainColor}
-            isLastItem={i === length - 1}
-          />
-        ) : (
-          <Image key={item.src} src={item.src} isLastItem={i === length - 1} />
-        )
+const ContentWrapper = ({items}) => (
+  <Fragment>
+    {items.map((item, i, {length}) =>
+      rapt(i % 2 === 0)
+        .map(isEven => (
+          <Fade key={item.src} left={isEven} right={!isEven}>
+            <Image
+              src={
+                item.type === 'video'
+                  ? item.thumb
+                  : `/static/images/${item.src}`
+              }
+              name={item.name}
+              isLastItem={i === length - 1}
+            />
+          </Fade>
+        ))
+        .val()
     )}
-  </div>
-))
+  </Fragment>
+)
 
 const Wrapper = styled.div`
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `
 
 const IndexPage = () => (
-  <Provider>
-    <Subscribe to={[ScrollContainer]}>
-      {scroll => <ScrollEvent callback={scroll.updateScrollY} />}
-    </Subscribe>
-    <Wrapper>
-      <Intro />
-      <ContentWrapper items={data} />
-    </Wrapper>
-  </Provider>
+  <Wrapper>
+    <Intro />
+    <ContentWrapper items={data} />
+  </Wrapper>
 )
 
 export default IndexPage
