@@ -1,55 +1,79 @@
 - type: image
   name: artura
   src: artura.jpeg
+  info:
+    title: artura
 
 - type: image
   name: b-y
   src: b-y.jpeg
+  info:
+    title: b-y
 
 - type: image
   name: stereo
   src: stereo.jpeg
+  info:
+    title: stereo
 
 - type: image
   name: tal
   src: tal.jpeg
+  info:
+    title: tal
 
 - type: image
   name: semions
   src: semions.jpeg
+  info:
+    title: semions
 
 - type: image
   name: semions-int
   src: semions-int.jpeg
+  info:
+    title: semions-int
 
 - type: image
   name: z-magnet
   src: z-magnet.jpeg
+  info:
+    title: z-magnet
 
 - type: image
   name: zorzs
   src: zorzs.jpeg
+  info:
+    title: zorzs
 
 - type: video
   name: '125344630'
   src: https://player.vimeo.com/video/125344630
+  info:
+    title: '125344630'
   thumb: https://i.vimeocdn.com/video/515413039.jpg?mw=1920&mh=1019
   mainColor: black
 
 - type: video
   name: '86240806'
   src: https://player.vimeo.com/video/86240806
+  info:
+    title: '86240806'
   thumb: https://i.vimeocdn.com/video/463840758.jpg?mw=1920&mh=1019
   mainColor: rgb(217, 184, 155)
 
 - type: video
   name: '129402751'
   src: https://player.vimeo.com/video/129402751
+  info:
+    title: '129402751'
   thumb: https://i.vimeocdn.com/video/520872335.jpg?mw=1920&mh=1019
   mainColor: rgb(175, 179, 160)
 
 - type: video
   name: '175580614'
   src: https://player.vimeo.com/video/175580614
+  info:
+    title: '175580614'
   thumb: https://i.vimeocdn.com/video/582675076.jpg?mw=1920&mh=1019
   mainColor: black

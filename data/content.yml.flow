@@ -4,6 +4,9 @@ type Video = $ReadOnly<{|
   type: 'video',
   name: string,
   src: string,
+  info: {
+    title: string
+  },
   thumb: string,
   mainColor: string
 |}>
@@ -12,6 +15,9 @@ type Image = $ReadOnly<{|
   type: 'image',
   name: string,
   src: string,
+  info: {
+    title: string
+  }
 |}>
 
 type ContentUnion = Video | Image

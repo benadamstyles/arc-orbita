@@ -12,7 +12,7 @@ import data from '../data/content.yml'
 
 if (process.env.NODE_ENV !== 'production') {
   const {whyDidYouUpdate} = require('why-did-you-update')
-  whyDidYouUpdate(React, {exclude: [/^Subscribe$/, /^Consumer$/]})
+  whyDidYouUpdate(React, {exclude: []})
 }
 
 const FeatureText = styled.p`
@@ -53,7 +53,7 @@ const ContentWrapper = ({items}) => (
 )
 
 const IndexPage = () => (
-  <Page>
+  <Page pad>
     <Global />
     <Intro />
     <ContentWrapper items={data} />
