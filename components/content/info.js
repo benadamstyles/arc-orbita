@@ -7,7 +7,7 @@ const Box = styled.div`
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 0.7rem;
   overflow: hidden;
-  padding: 1rem;
+  padding: 0.7rem;
 `
 
 const Button = styled.button.attrs({type: 'button'})`
