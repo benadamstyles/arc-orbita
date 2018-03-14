@@ -4,8 +4,10 @@ import React, {Fragment} from 'react'
 import styled from 'styled-components'
 import Fade from 'react-reveal/Fade'
 import rapt from 'rapt'
-import Image from '../components/content/image'
+import Thumb from '../components/content/thumb'
 import DisplaceAbsolute from '../components/util/displace-absolute'
+import Page from '../components/layout/page'
+import Global from '../components/meta/global'
 import data from '../data/content.yml'
 
 if (process.env.NODE_ENV !== 'production') {
@@ -22,7 +24,7 @@ const Intro = DisplaceAbsolute(
   ({style}) => (
     <div style={style}>
       <h1>Orbita</h1>
-      <FeatureText>Welcome to this Arc Orbita website.</FeatureText>
+      <FeatureText>Welcome to the Arc Orbita website.</FeatureText>
     </div>
   ),
   {padding: '1rem'}
@@ -34,7 +36,7 @@ const ContentWrapper = ({items}) => (
       rapt(i % 2 === 0)
         .map(isEven => (
           <Fade key={item.src} left={isEven} right={!isEven}>
-            <Image
+            <Thumb
               src={
                 item.type === 'video'
                   ? item.thumb
@@ -50,18 +52,12 @@ const ContentWrapper = ({items}) => (
   </Fragment>
 )
 
-const Wrapper = styled.div`
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`
-
 const IndexPage = () => (
-  <Wrapper>
+  <Page>
+    <Global />
     <Intro />
     <ContentWrapper items={data} />
-  </Wrapper>
+  </Page>
 )
 
 export default IndexPage

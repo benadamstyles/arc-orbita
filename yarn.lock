@@ -4414,6 +4414,10 @@ rapt@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/rapt/-/rapt-1.2.0.tgz#234ca614ca63ab7f650f0e87985f04db170f9ad8"
 
+raw-loader@^0.5.1:
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/raw-loader/-/raw-loader-0.5.1.tgz#0c3d0beaed8a01c966d9787bf778281252a979aa"
+
 rc@^1.0.1, rc@^1.1.6:
   version "1.2.5"
   resolved "https://registry.yarnpkg.com/rc/-/rc-1.2.5.tgz#275cd687f6e3b36cc756baa26dfee80a790301fd"

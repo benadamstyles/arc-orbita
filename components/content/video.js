@@ -2,7 +2,7 @@
 
 import React, {PureComponent} from 'react'
 import styled from 'styled-components'
-import {ImageElement} from './image'
+import {ImageElement} from './thumb'
 
 const VideoContainer = styled.div`
   position: relative;

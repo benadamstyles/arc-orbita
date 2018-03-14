@@ -32,11 +32,14 @@ type Props = {
   isLastItem: boolean,
 }
 
-const Image = ({src, isLastItem, name}: Props) => (
+const Thumb = ({src, isLastItem, name}: Props) => (
   <ImageContainerStyled isLastItem={isLastItem}>
     <Link href={{pathname: '/item', query: {name}}} as={`/${name}`}>
-      <ImageElement source={src} />
+      <a>
+        <ImageElement source={src} />
+      </a>
     </Link>
   </ImageContainerStyled>
 )
-export default Image
+
+export default Thumb

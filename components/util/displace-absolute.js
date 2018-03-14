@@ -20,11 +20,13 @@ const DisplaceAbsolute = (
   Component: ComponentType<*>,
   style: {},
   wrapperStyle?: {}
-) => () => (
-  <div style={{...styles.wrapper, ...wrapperStyle}}>
-    <Component style={styles.invisible} />
-    <Component style={{...style, ...styles.reset, position}} />
-  </div>
-)
+) =>
+  // eslint-disable-next-line react/display-name
+  () => (
+    <div style={{...styles.wrapper, ...wrapperStyle}}>
+      <Component style={styles.invisible} />
+      <Component style={{...style, ...styles.reset, position}} />
+    </div>
+  )
 
 export default DisplaceAbsolute

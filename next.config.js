@@ -9,10 +9,16 @@ const fromPairs = require('lodash/fromPairs')
 module.exports = {
   // $FlowIgnore
   webpack: config => {
-    config.module.rules.push({
-      test: /\.ya?ml$/,
-      use: 'js-yaml-loader',
-    })
+    config.module.rules.push(
+      {
+        test: /\.ya?ml$/,
+        use: 'js-yaml-loader',
+      },
+      {
+        test: /\.css$/,
+        use: 'raw-loader',
+      }
+    )
     return config
   },
   exportPathMap: () =>
