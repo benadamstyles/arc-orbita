@@ -9,6 +9,7 @@ import DisplaceAbsolute from '../components/util/displace-absolute'
 import Page from '../components/layout/page'
 import Global from '../components/meta/global'
 import data from '../data/content.yml'
+import {primaryColor} from '../constants/style/colors'
 
 if (process.env.NODE_ENV !== 'production') {
   const {whyDidYouUpdate} = require('why-did-you-update')
@@ -16,7 +17,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 const FeatureText = styled.p`
-  color: #be3a34;
+  color: ${primaryColor};
 `
 
 const Intro = DisplaceAbsolute(

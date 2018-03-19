@@ -33,7 +33,13 @@ const Item = ({url: {query: {name}}}: {url: Url<{name: string}>}) =>
       <Page>
         <Global />
         <Image src={`/static/images/${item.src}`} />
-        <Info name={name} style={styles.info} title={item.info.title} />
+        <Info
+          name={name}
+          style={styles.info}
+          title={item.info.title}
+          backgroundColor={item.backgroundColor}
+          description={item.info.description}
+        />
       </Page>
     ))
     .orJust(null)

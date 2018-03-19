@@ -4,20 +4,24 @@ type Video = $ReadOnly<{|
   type: 'video',
   name: string,
   src: string,
-  info: {
-    title: string
-  },
   thumb: string,
-  mainColor: string
+  backgroundColor: string,
+  mainColor: string,
+  info: {
+    title: string,
+    description: string,
+  },
 |}>
 
 type Image = $ReadOnly<{|
   type: 'image',
   name: string,
   src: string,
+  backgroundColor: string,
   info: {
-    title: string
-  }
+    title: string,
+    description: string,
+  },
 |}>
 
 type ContentUnion = Video | Image
