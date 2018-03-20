@@ -16,6 +16,10 @@ if (process.env.NODE_ENV !== 'production') {
   whyDidYouUpdate(React, {exclude: []})
 }
 
+const FeatureImg = styled.img`
+  max-width: 100%;
+`
+
 const FeatureText = styled.p`
   color: ${primaryColor};
 `
@@ -24,7 +28,7 @@ const Intro = DisplaceAbsolute(
   'fixed',
   ({style}) => (
     <div style={style}>
-      <h1>Orbita</h1>
+      <FeatureImg src="/static/images/orbita-trans.png" />
       <FeatureText>Welcome to the Arc Orbita website.</FeatureText>
     </div>
   ),
