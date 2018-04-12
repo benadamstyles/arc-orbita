@@ -1,7 +1,7 @@
 // @flow
 
 import React, {type Node} from 'react'
-import Link from 'next/link'
+import {Link} from 'react-static'
 import styled from 'styled-components'
 
 type ImageContainerProps = {
@@ -34,10 +34,8 @@ type Props = {
 
 const Thumb = ({src, isLastItem, name}: Props) => (
   <ImageContainerStyled isLastItem={isLastItem}>
-    <Link href={{pathname: '/item', query: {name}}} as={`/${name}`}>
-      <a>
-        <ImageElement source={src} />
-      </a>
+    <Link to={`/${name}/`}>
+      <ImageElement source={src} />
     </Link>
   </ImageContainerStyled>
 )

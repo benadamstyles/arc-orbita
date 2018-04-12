@@ -1,7 +1,10 @@
 // @flow
 
+type Category = 'books' | 'videos'
+
 type Video = $ReadOnly<{|
   type: 'video',
+  category: Category,
   name: string,
   src: string,
   thumb: string,
@@ -15,6 +18,7 @@ type Video = $ReadOnly<{|
 
 type Image = $ReadOnly<{|
   type: 'image',
+  category: Category,
   name: string,
   src: string,
   backgroundColor: string,
@@ -22,6 +26,8 @@ type Image = $ReadOnly<{|
     title: string,
     description: string,
   },
+  pages?: $ReadOnlyArray<string>,
+  pagesAspectRatio?: number
 |}>
 
 type ContentUnion = Video | Image

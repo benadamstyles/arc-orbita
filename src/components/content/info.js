@@ -6,7 +6,7 @@ import {primaryColor} from '../../constants/style/colors'
 
 const Box = styled.div`
   transition: opacity 0.2s ease-out;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.5);
   border-radius: 0.7rem;
   overflow: hidden;
   padding: 0.7rem;
@@ -48,11 +48,9 @@ const Minimized = ({style, onClick, visible}) => (
 )
 
 type Props = {
-  name: string,
   style: {},
   title: string,
   description: string,
-  backgroundColor: string,
 }
 
 class Info extends PureComponent<Props, {expanded: boolean}> {
@@ -75,13 +73,6 @@ class Info extends PureComponent<Props, {expanded: boolean}> {
           onClick={this.toggle}
           visible={!this.state.expanded}
         />
-        <style global jsx>
-          {`
-            html {
-              background-color: ${this.props.backgroundColor};
-            }
-          `}
-        </style>
       </Fragment>
     )
   }

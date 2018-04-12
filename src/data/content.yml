@@ -1,4 +1,5 @@
 - type: image
+  category: books
   name: artura
   src: artura.jpeg
   backgroundColor: rgb(184, 189, 185)
@@ -7,14 +8,20 @@
     description: Voluptas quibusdam corrupti eligendi ipsa voluptate nesciunt. Doloribus vel qui alias. Ut aut perferendis temporibus nulla dignissimos laborum est. Corporis cumque tempora. Minima autem nisi unde saepe qui voluptas dolorum nostrum optio.
 
 - type: image
-  name: b-y
+  category: books
+  name: used
   src: b-y.jpeg
   backgroundColor: rgb(199, 193, 193)
   info:
-    title: B-Y
+    title: Vladimir Svetlov / used
     description: Aut molestias facere odit. Aspernatur laboriosam quaerat. Saepe atque ratione provident minima ut harum distinctio. Cupiditate blanditiis porro rem neque voluptas sunt tempore. Voluptatem autem voluptatem quo neque fugiat dolore qui eveniet aliquam. Quos facilis aut voluptas quo cupiditate et sed fugit.
+  pages:
+    - b-y/18-19.jpg
+    - b-y/28-29.jpg
+  pagesAspectRatio: 1.3961605585
 
 - type: image
+  category: books
   name: stereo
   src: stereo.jpeg
   backgroundColor: white
@@ -23,6 +30,7 @@
     description: Culpa exercitationem voluptatibus est temporibus itaque quo aliquid quae. Iure ab officia ratione aspernatur veritatis numquam nemo. Eum ipsa aut aliquam ipsam nisi rem. Tempore et iure et. Ea adipisci non placeat et modi vel et ut.
 
 - type: image
+  category: books
   name: tal
   src: tal.jpeg
   backgroundColor: rgb(241, 240, 238)
@@ -31,6 +39,7 @@
     description: Ipsam porro illum esse. Placeat ex sed quia harum a neque. Repellendus consequatur voluptas. Cum quae qui aliquid rem qui consectetur. Sed distinctio reprehenderit et quia consequuntur odio dolor in. Laboriosam officiis soluta provident saepe consequatur ea.
 
 - type: image
+  category: books
   name: semions
   src: semions.jpeg
   backgroundColor: rgb(220, 220, 220)
@@ -39,6 +48,7 @@
     description: At praesentium accusantium fugiat qui. Atque incidunt aut aliquam totam. Laboriosam ducimus dolorum. Omnis et animi delectus et non aut.
 
 - type: image
+  category: books
   name: semions-int
   src: semions-int.jpeg
   backgroundColor: rgb(220, 218, 219)
@@ -47,6 +57,7 @@
     description: Est ex aliquam. Eligendi accusamus sint itaque consequuntur.
 
 - type: image
+  category: books
   name: z-magnet
   src: z-magnet.jpeg
   backgroundColor: rgb(227, 229, 228)
@@ -55,6 +66,7 @@
     description: Dolorem accusamus illo unde voluptatem minus placeat repellendus voluptatum. Pariatur accusamus debitis sit consectetur odio sint aliquam aut. Dolorem voluptas quis dicta et laborum. Non ab nam est iure ab architecto eos autem. Eum et consequatur itaque autem laborum.
 
 - type: image
+  category: books
   name: zorzs
   src: zorzs.jpeg
   backgroundColor: rgb(223, 224, 226)
@@ -63,41 +75,38 @@
     description: Et sed sed fugiat. Quidem minima vel dolorem in.
 
 - type: video
-  name: '125344630'
-  src: https://player.vimeo.com/video/125344630
-  thumb: https://i.vimeocdn.com/video/515413039.jpg?mw=1920&mh=1019
+  category: videos
+  name: time-room
+  src: https://www.youtube-nocookie.com/embed/7LnPnME38mU?rel=0&amp;showinfo=0
+  thumb: /orbita/assets/images/video-thumbs/time-room.jpg
   backgroundColor: black
   mainColor: black
   info:
-    title: '125344630'
-    description: Assumenda id itaque culpa voluptatibus sit voluptas sint itaque. Aut voluptatum rerum ut eligendi perspiciatis est.
+    title: Time Room
+    description: Аудио-видеоинсталляция "Комната времени". Рига, 30 августа 2008, форум современной культуры "Белая ночь".
 
 - type: video
-  name: '86240806'
-  src: https://player.vimeo.com/video/86240806
-  thumb: https://i.vimeocdn.com/video/463840758.jpg?mw=1920&mh=1019
-  backgroundColor: black
-  mainColor: rgb(217, 184, 155)
+  category: videos
+  name: right
+  src: https://www.youtube-nocookie.com/embed/9biz1-l29Yk?rel=0&amp;showinfo=0
+  thumb: /orbita/assets/images/video-thumbs/right.jpg
+  backgroundColor: white
+  mainColor: rgb(175, 179, 160)
   info:
-    title: '86240806'
-    description: Assumenda aut soluta et voluptatibus et sunt asperiores omnis. Qui adipisci in veritatis qui excepturi laboriosam similique. Omnis sapiente id minima. Quia debitis eligendi at voluptate fugit aliquid rerum cumque.
+    title: Right, kinetic poem
+    description: |
+      Installation "Right. Kinetic poem" for exhibition in the KIM? contemporary art center (www.kim.lv).
+      Idea: Arturs Punte
+      Design: Eugene Sysoev
+      Text: Sergei Timofejev
 
 - type: video
-  name: '129402751'
-  src: https://player.vimeo.com/video/129402751
-  thumb: https://i.vimeocdn.com/video/520872335.jpg?mw=1920&mh=1019
+  category: videos
+  name: orchestral-rehearsal
+  src: https://player.vimeo.com/video/155541855
+  thumb: https://i.vimeocdn.com/video/556329045.jpg?mw=1800&mh=1013
   backgroundColor: black
   mainColor: rgb(175, 179, 160)
   info:
-    title: '129402751'
-    description: Voluptas est magni officiis itaque. Unde eos ad. Odit quia vel. Sapiente officiis ut. Harum explicabo et et mollitia delectus.
-
-- type: video
-  name: '175580614'
-  src: https://player.vimeo.com/video/175580614
-  thumb: https://i.vimeocdn.com/video/582675076.jpg?mw=1920&mh=1019
-  backgroundColor: black
-  mainColor: black
-  info:
-    title: '175580614'
-    description: Quasi culpa sed voluptas cum eligendi ut neque. Deleniti nulla excepturi voluptates. Mollitia ipsam minima quo exercitationem illo dolorum quo. Repudiandae aut dolore inventore omnis ipsa aliquam enim. Non minus vel autem et velit.
+    title: Orchestral Rehearsal
+    description: Сергей Тимофеев и Виктор Вилкс. Репетиция оркестра / Sergej Timofejev & Victor Vilks.

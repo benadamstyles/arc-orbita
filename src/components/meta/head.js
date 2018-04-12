@@ -1,7 +1,7 @@
 // @flow
 
 import React from 'react'
-import Head from 'next/head'
+import {Head} from 'react-static'
 
 const DefaultHead = () => (
   <Head>

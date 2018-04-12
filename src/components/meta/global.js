@@ -2,12 +2,11 @@
 
 import React, {Fragment} from 'react'
 import DefaultHead from './head'
-import Style from './style'
+import '../../css/index.css'
 
 const Global = () => (
   <Fragment>
     <DefaultHead />
-    <Style />
   </Fragment>
 )
 
