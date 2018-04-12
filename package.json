@@ -8,6 +8,7 @@
     "start": "react-static start",
     "stage": "react-static build --staging && yarn run serve",
     "build": "react-static build",
+    "predeploy": "yarn lint && glow !node_modules/*",
     "deploy": "yarn build && yarn run upload-site",
     "serve": "serve dist -p 3000",
     "flow": "flow --color=always",

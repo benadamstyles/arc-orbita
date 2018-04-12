@@ -11,10 +11,12 @@ export default App
 
 // Render your app
 if (typeof document !== 'undefined') {
+  // $FlowFixMe
   const renderMethod = module.hot
     ? ReactDOM.render
     : ReactDOM.hydrate || ReactDOM.render
   const render = Comp => {
+    // $FlowFixMe
     renderMethod(<Comp />, document.getElementById('root'))
   }
 
