@@ -3,7 +3,7 @@
 import React, {PureComponent, type ElementType} from 'react'
 import styled from 'styled-components'
 import {maybe} from 'maybes'
-import {withRouteData} from 'react-static'
+import {withRouteData, Link} from 'react-static'
 import typeof Data from '../data/content.yml'
 import Global from '../components/meta/global'
 import Page from '../components/layout/page'
@@ -71,6 +71,8 @@ class Item extends PureComponent<Props, State> {
     return (
       <Page>
         <Global />
+        <Link to={`/${item.category}`}>{'< Back'}</Link>
+
         {item.type === 'image' ? (
           <Image src={getImagePath(item.src)} />
         ) : (
