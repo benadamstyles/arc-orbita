@@ -9,6 +9,7 @@ import DisplaceAbsolute from '../components/util/displace-absolute'
 import Page from '../components/layout/page'
 import Global from '../components/meta/global'
 import {primaryColor} from '../constants/style/colors'
+import {getImagePath} from '../util/path'
 
 // if (process.env.NODE_ENV !== 'production') {
 //   const {whyDidYouUpdate} = require('why-did-you-update')
@@ -28,7 +29,7 @@ export const Intro = DisplaceAbsolute(
   ({style}) => (
     <div style={style}>
       <Link to="/">
-        <FeatureImg src="/orbita/assets/images/orbita-trans.png" />
+        <FeatureImg src={getImagePath('orbita-trans.png')} />
       </Link>
       <FeatureText>Welcome to the Arc Orbita website.</FeatureText>
     </div>
@@ -43,11 +44,9 @@ const ContentWrapper = ({categories, sampleItems}) => (
         .map(firstItem => (
           <Category
             key={category}
-            src={
-              firstItem.type === 'video'
-                ? firstItem.thumb
-                : `/orbita/assets/images/${firstItem.src}`
-            }
+            src={getImagePath(
+              firstItem.type === 'video' ? firstItem.thumb : firstItem.src
+            )}
             name={category}
             isLastItem={i === length - 1}
           />

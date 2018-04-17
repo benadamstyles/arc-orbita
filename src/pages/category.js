@@ -8,6 +8,7 @@ import typeof Data from '../data/content.yml'
 import Thumb from '../components/content/thumb'
 import Page from '../components/layout/page'
 import Global from '../components/meta/global'
+import {getImagePath} from '../util/path'
 import {Intro} from './index'
 
 const ContentWrapper = ({items}) => (
@@ -17,11 +18,7 @@ const ContentWrapper = ({items}) => (
         .map(isEven => (
           <Fade key={item.src} left={isEven} right={!isEven}>
             <Thumb
-              src={
-                item.type === 'video'
-                  ? item.thumb
-                  : `/orbita/assets/images/${item.src}`
-              }
+              src={getImagePath(item.type === 'video' ? item.thumb : item.src)}
               name={item.name}
               isLastItem={i === length - 1}
             />

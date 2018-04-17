@@ -78,7 +78,7 @@
   category: videos
   name: time-room
   src: https://www.youtube-nocookie.com/embed/7LnPnME38mU?rel=0&amp;showinfo=0
-  thumb: /orbita/assets/images/video-thumbs/time-room.jpg
+  thumb: video-thumbs/time-room.jpg
   backgroundColor: black
   mainColor: black
   info:
@@ -89,7 +89,7 @@
   category: videos
   name: right
   src: https://www.youtube-nocookie.com/embed/9biz1-l29Yk?rel=0&amp;showinfo=0
-  thumb: /orbita/assets/images/video-thumbs/right.jpg
+  thumb: video-thumbs/right.jpg
   backgroundColor: white
   mainColor: rgb(175, 179, 160)
   info:
@@ -102,11 +102,11 @@
 
 - type: video
   category: videos
-  name: orchestral-rehearsal
+  name: orchestra-rehearsal
   src: https://player.vimeo.com/video/155541855
-  thumb: https://i.vimeocdn.com/video/556329045.jpg?mw=1800&mh=1013
+  thumb: video-thumbs/orchestra-rehearsal.jpg
   backgroundColor: black
   mainColor: rgb(175, 179, 160)
   info:
-    title: Orchestral Rehearsal
+    title: Orchestra Rehearsal
     description: Сергей Тимофеев и Виктор Вилкс. Репетиция оркестра / Sergej Timofejev & Victor Vilks.

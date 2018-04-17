@@ -9,6 +9,7 @@ import Global from '../components/meta/global'
 import Page from '../components/layout/page'
 import Info from '../components/content/info'
 import Video from '../components/content/video'
+import {getImagePath} from '../util/path'
 
 const styles = {
   info: {
@@ -71,7 +72,7 @@ class Item extends PureComponent<Props, State> {
       <Page>
         <Global />
         {item.type === 'image' ? (
-          <Image src={`/orbita/assets/images/${item.src}`} />
+          <Image src={getImagePath(item.src)} />
         ) : (
           <Video {...item} />
         )}
@@ -91,7 +92,7 @@ class Item extends PureComponent<Props, State> {
                     animationDuration={300}
                     orientation="horizontal">
                     {pages.map(url => (
-                      <img src={`/orbita/assets/images/books/${url}`} />
+                      <img src={getImagePath(`books/${url}`)} />
                     ))}
                   </Flip>
                 </FlipWrapper>
