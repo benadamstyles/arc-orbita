@@ -30,11 +30,12 @@ type Props = {
   src: string,
   name: string,
   isLastItem: boolean,
+  category: string,
 }
 
-const Thumb = ({src, isLastItem, name}: Props) => (
+const Thumb = ({src, isLastItem, name, category}: Props) => (
   <ImageContainerStyled isLastItem={isLastItem}>
-    <Link to={`/${name}/`}>
+    <Link to={`/${category}/${name}/`}>
       <ImageElement source={src} />
     </Link>
   </ImageContainerStyled>

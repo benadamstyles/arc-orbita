@@ -18,6 +18,7 @@ const ContentWrapper = ({items}) => (
         .map(isEven => (
           <Fade key={item.src} left={isEven} right={!isEven}>
             <Thumb
+              category={item.category}
               src={getImagePath(item.type === 'video' ? item.thumb : item.src)}
               name={item.name}
               isLastItem={i === length - 1}
