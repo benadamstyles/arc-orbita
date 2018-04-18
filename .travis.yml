@@ -6,4 +6,4 @@ install:
   - yarn install
   - yarn check --integrity
 script:
-  - yarn build
+  - yarn test
