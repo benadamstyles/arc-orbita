@@ -19,7 +19,7 @@
     "glow": "glow --watch !node_modules/*",
     "flow-typed": "flow-typed install --skip",
     "lint": "eslint .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "yarn lint && yarn run flow && yarn build"
   },
   "dependencies": {
     "lodash": "^4.17.5",
@@ -48,7 +48,7 @@
     "eslint-plugin-jest": "^21.15.0",
     "eslint-plugin-react": "^7.7.0",
     "eslint-plugin-react-native": "^3.2.1",
-    "flow-bin": "^0.69.0",
+    "flow-bin": "^0.70.0",
     "flow-typed": "^2.3.0",
     "glow": "^1.2.2",
     "js-yaml": "^3.11.0",
