@@ -10,6 +10,7 @@
     "build": "react-static build",
     "predeploy": "yarn lint",
     "deploy": "yarn build && yarn run upload-site",
+    "postdeploy": "echo https://www.arcpublications.co.uk/orbita/",
     "serve": "serve dist -p 3000",
     "flow": "flow --color=always",
     "glow": "glow --watch !node_modules/*",
