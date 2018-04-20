@@ -2,6 +2,8 @@
 
 import React, {PureComponent, Fragment} from 'react'
 import styled from 'styled-components'
+import withFutureState from 'set-future-state'
+import {after} from 'fluture'
 import {primaryColor} from '../../constants/style/colors'
 
 const Box = styled.div`
@@ -53,29 +55,34 @@ type Props = {
   description: string,
 }
 
-class Info extends PureComponent<Props, {expanded: boolean}> {
-  state = {expanded: true}
+export default withFutureState(
+  setFutureState =>
+    class Info extends PureComponent<Props, {expanded: boolean}> {
+      state = {expanded: false}
 
-  toggle = () => this.setState(({expanded}) => ({expanded: !expanded}))
+      componentDidMount() {
+        setFutureState(this, after(1000, true), expanded => ({expanded}))
+      }
 
-  render() {
-    return (
-      <Fragment>
-        <Maximized
-          style={this.props.style}
-          onClick={this.toggle}
-          visible={this.state.expanded}
-          title={this.props.title}
-          description={this.props.description}
-        />
-        <Minimized
-          style={this.props.style}
-          onClick={this.toggle}
-          visible={!this.state.expanded}
-        />
-      </Fragment>
-    )
-  }
-}
+      toggle = () => this.setState(({expanded}) => ({expanded: !expanded}))
 
-export default Info
+      render() {
+        return (
+          <Fragment>
+            <Maximized
+              style={this.props.style}
+              onClick={this.toggle}
+              visible={this.state.expanded}
+              title={this.props.title}
+              description={this.props.description}
+            />
+            <Minimized
+              style={this.props.style}
+              onClick={this.toggle}
+              visible={!this.state.expanded}
+            />
+          </Fragment>
+        )
+      }
+    }
+)
