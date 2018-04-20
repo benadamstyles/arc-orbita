@@ -40,11 +40,15 @@ const Button = styled.button.attrs({type: 'button'})`
   }
 `
 
+const Description = styled.p`
+  white-space: pre-line;
+`
+
 const Maximized = ({style, onClick, visible, title, description}) => (
   <ScalingBox style={style} visible={visible}>
     <BoxContent>
       <h1>{title}</h1>
-      <p>{description}</p>
+      <Description>{description}</Description>
     </BoxContent>
     <Button onClick={onClick}>Hide</Button>
   </ScalingBox>
@@ -74,6 +78,7 @@ export default withFutureState(
       toggle = () => this.setState(({expanded}) => ({expanded: !expanded}))
 
       render() {
+        console.log(this.props.description)
         return (
           <Fragment>
             <Maximized

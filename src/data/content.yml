@@ -13,11 +13,18 @@
   src: b-y.jpeg
   backgroundColor: rgb(199, 193, 193)
   info:
-    title: Vladimir Svetlov / used
-    description: Aut molestias facere odit. Aspernatur laboriosam quaerat. Saepe atque ratione provident minima ut harum distinctio. Cupiditate blanditiis porro rem neque voluptas sunt tempore. Voluptatem autem voluptatem quo neque fugiat dolore qui eveniet aliquam. Quos facilis aut voluptas quo cupiditate et sed fugit.
+    title: Vladimir Svetlov – /used/
+    description: |
+      Edited by Alexander Zapol
+      Latvian translators: Ingmāra Balode, Pēteris Draguns, Marts Pujāts, Arvis Viguls
+      English translator Kevin M. F. Platt
+      Designer Ieva Skuja
+      Published by Orbita (Riga, 2014)
+      Photography by Vladimir Svetlov & Anna Volkova
   pages:
     - b-y/18-19.jpg
     - b-y/28-29.jpg
+    - b-y/44-45.jpg
   pagesAspectRatio: 1.3961605585
 
 - type: image
