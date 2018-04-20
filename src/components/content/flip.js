@@ -2,7 +2,7 @@
 
 import React, {type ElementType} from 'react'
 import styled from 'styled-components'
-import type {Item} from '../../pages/item'
+import type {Image} from '../../data/content.yml'
 import {getImagePath} from '../../util/path'
 
 const maxWidthInRem = 60
@@ -17,12 +17,12 @@ const FlipWrapper = styled.div`
 `
 
 type Props = $ReadOnly<{
-  item: Item,
+  item: Image,
   FlipPage: ElementType,
-  pages: $PropertyType<Item, 'pages'>,
+  pages: $PropertyType<Image, 'pages'>,
 }>
 
-const Flip = ({item, FlipPage, pages}: Props) => (
+const Flip = ({item, FlipPage, pages = []}: Props) => (
   <FlipWrapper ratio={item.pagesAspectRatio}>
     <FlipPage
       responsive

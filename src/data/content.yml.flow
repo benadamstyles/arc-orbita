@@ -1,8 +1,8 @@
 // @flow
 
-type Category = 'books' | 'videos'
+export type Category = 'books' | 'videos'
 
-type Video = $ReadOnly<{|
+export type Video = $ReadOnly<{|
   type: 'video',
   category: Category,
   name: string,
@@ -16,7 +16,7 @@ type Video = $ReadOnly<{|
   },
 |}>
 
-type Image = $ReadOnly<{|
+export type Image = $ReadOnly<{|
   type: 'image',
   category: Category,
   name: string,
@@ -30,6 +30,6 @@ type Image = $ReadOnly<{|
   pagesAspectRatio?: number
 |}>
 
-type ContentUnion = Video | Image
+export type ContentUnion = Video | Image
 
 declare module.exports: $ReadOnlyArray<ContentUnion>

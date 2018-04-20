@@ -4,15 +4,13 @@ import React, {PureComponent, type ElementType} from 'react'
 import styled from 'styled-components'
 import {maybe} from 'maybes'
 import {Link, withRouteData} from 'react-static'
-import typeof Data from '../data/content.yml'
+import type {ContentUnion} from '../data/content.yml'
 import Global from '../components/meta/global'
 import Page from '../components/layout/page'
 import Info from '../components/content/info'
 import Video from '../components/content/video'
 import Flip from '../components/content/flip'
 import {getImagePath} from '../util/path'
-
-export type Item = $ElementType<Data, number>
 
 const styles = {
   info: {
@@ -28,7 +26,7 @@ const styles = {
 const Image = styled.img``
 
 type Props = {
-  item: Item,
+  item: ContentUnion,
 }
 
 type State = {
