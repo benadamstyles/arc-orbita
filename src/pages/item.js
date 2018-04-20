@@ -4,11 +4,12 @@ import React, {PureComponent, type ElementType} from 'react'
 import styled from 'styled-components'
 import {maybe} from 'maybes'
 import {Link, withRouteData} from 'react-static'
-import typeof Data from '../data/content.yml'
+import type {ContentUnion} from '../data/content.yml'
 import Global from '../components/meta/global'
 import Page from '../components/layout/page'
 import Info from '../components/content/info'
 import Video from '../components/content/video'
+import Flip from '../components/content/flip'
 import {getImagePath} from '../util/path'
 
 const styles = {
@@ -24,46 +25,40 @@ const styles = {
 
 const Image = styled.img``
 
-const FlipWrapper = styled.div`
-  margin-top: 3rem;
-  width: 100%;
-  height: ${({ratio}) => 100 / ratio}vw;
-`
-
 type Props = {
-  item: $ElementType<Data, number>,
+  item: ContentUnion,
 }
 
 type State = {
-  Flip: ?ElementType,
+  FlipPage: ?ElementType,
 }
 
-class Item extends PureComponent<Props, State> {
+class ItemPage extends PureComponent<Props, State> {
   initialHtmlBackgroundColor: string = ''
 
   state = {
-    Flip: null,
+    FlipPage: null,
   }
 
+  /* eslint-disable fp/no-mutation */
   componentDidMount() {
-    this.setState({Flip: require('react-flip-page').default})
+    this.setState({FlipPage: require('react-flip-page').default})
 
     this.initialHtmlBackgroundColor = window.getComputedStyle(
       document.documentElement
     ).backgroundColor
 
     maybe(document.documentElement).forEach(html => {
-      // eslint-disable-next-line fp/no-mutation
       html.style.backgroundColor = this.props.item.backgroundColor
     })
   }
 
   componentWillUnmount() {
     maybe(document.documentElement).forEach(html => {
-      // eslint-disable-next-line fp/no-mutation
       html.style.backgroundColor = this.initialHtmlBackgroundColor
     })
   }
+  /* eslint-enable fp/no-mutation */
 
   render() {
     const {item} = this.props
@@ -84,22 +79,8 @@ class Item extends PureComponent<Props, State> {
         {item.type === 'image' &&
           maybe(item.pages)
             .flatMap(pages =>
-              maybe(this.state.Flip).map(Flip => (
-                <FlipWrapper ratio={item.pagesAspectRatio}>
-                  <Flip
-                    responsive
-                    uncutPages
-                    flipOnTouch
-                    showHint
-                    showTouchHint
-                    pageBackground={item.backgroundColor}
-                    animationDuration={300}
-                    orientation="horizontal">
-                    {pages.map(url => (
-                      <img src={getImagePath(`books/${url}`)} />
-                    ))}
-                  </Flip>
-                </FlipWrapper>
+              maybe(this.state.FlipPage).map(FlipPage => (
+                <Flip item={item} pages={pages} FlipPage={FlipPage} />
               ))
             )
             .orJust(null)}
@@ -114,4 +95,4 @@ class Item extends PureComponent<Props, State> {
   }
 }
 
-export default withRouteData(Item)
+export default withRouteData(ItemPage)
