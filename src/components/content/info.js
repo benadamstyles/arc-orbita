@@ -11,10 +11,10 @@ const Box = styled.div`
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 0.7rem;
   overflow: hidden;
-  padding: 0.7rem;
   margin-right: ${({style}) => style.left};
   opacity: ${({visible}) => (visible ? 1 : 0)};
   z-index: ${({visible}) => (visible ? 1 : 0)};
+  pointer-events: ${({visible}) => (visible ? 'auto' : 'none')};
   max-width: 35em;
 `
 
@@ -24,28 +24,35 @@ const ScalingBox = Box.extend`
   transform: scale(${({visible}) => (visible ? 1 : 0.1)});
 `
 
+const BoxContent = styled.div`
+  padding: 0.7rem;
+`
+
 const Button = styled.button.attrs({type: 'button'})`
-  background-color: rgba(255, 255, 255, 0.3);
+  padding: 0.7rem;
+  background-color: transparent;
   border: none;
   color: ${primaryColor};
   font-weight: bold;
 
   &:hover {
-    transform: scale(1.2);
+    opacity: 0.7;
   }
 `
 
 const Maximized = ({style, onClick, visible, title, description}) => (
   <ScalingBox style={style} visible={visible}>
-    <h1>{title}</h1>
-    <p>{description}</p>
-    <Button onClick={onClick}>–</Button>
+    <BoxContent>
+      <h1>{title}</h1>
+      <p>{description}</p>
+    </BoxContent>
+    <Button onClick={onClick}>Hide</Button>
   </ScalingBox>
 )
 
 const Minimized = ({style, onClick, visible}) => (
   <Box style={style} visible={visible}>
-    <Button onClick={onClick}>+</Button>
+    <Button onClick={onClick}>Info</Button>
   </Box>
 )
 
