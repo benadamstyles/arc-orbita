@@ -14,6 +14,9 @@ const FlipWrapper = styled.div`
   max-width: ${maxWidthInRem}rem;
   height: ${({ratio}) => 100 / ratio}vw;
   max-height: ${({ratio}) => maxWidthInRem / ratio}rem;
+  border: 5px solid;
+  border-color: ${({coverColor}) => coverColor};
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
 `
 
 type Props = $ReadOnly<{
@@ -23,7 +26,7 @@ type Props = $ReadOnly<{
 }>
 
 const Flip = ({item, FlipPage, pages = []}: Props) => (
-  <FlipWrapper ratio={item.pagesAspectRatio}>
+  <FlipWrapper coverColor={item.coverColor} ratio={item.pagesAspectRatio}>
     <FlipPage
       responsive
       uncutPages
