@@ -1,40 +1,74 @@
 - type: image
   category: books
-  name: artura
-  src: artura.jpeg
-  backgroundColor: rgb(184, 189, 185)
-  info:
-    title: Artura
-    description: Voluptas quibusdam corrupti eligendi ipsa voluptate nesciunt. Doloribus vel qui alias. Ut aut perferendis temporibus nulla dignissimos laborum est. Corporis cumque tempora. Minima autem nisi unde saepe qui voluptas dolorum nostrum optio.
-
-- type: image
-  category: books
-  name: used
-  src: b-y.jpeg
-  backgroundColor: rgb(199, 193, 193)
-  info:
-    title: Vladimir Svetlov – /used/
-    description: |
-      Edited by Alexander Zapol
-      Latvian translators: Ingmāra Balode, Pēteris Draguns, Marts Pujāts, Arvis Viguls
-      English translator Kevin M. F. Platt
-      Designer Ieva Skuja
-      Published by Orbita (Riga, 2014)
-      Photography by Vladimir Svetlov & Anna Volkova
-  pages:
-    - b-y/18-19.jpg
-    - b-y/28-29.jpg
-    - b-y/44-45.jpg
-  pagesAspectRatio: 1.3961605585
-
-- type: image
-  category: books
   name: stereo
   src: stereo.jpeg
   backgroundColor: white
   info:
-    title: Stereo
-    description: Culpa exercitationem voluptatibus est temporibus itaque quo aliquid quae. Iure ab officia ratione aspernatur veritatis numquam nemo. Eum ipsa aut aliquam ipsam nisi rem. Tempore et iure et. Ea adipisci non placeat et modi vel et ut.
+    title: Sergejs Timofejevs • Stereo
+    description: ''
+  coverColor: '#25282A'
+
+- type: image
+  category: books
+  name: artura
+  src: artura.jpeg
+  backgroundColor: rgb(184, 189, 185)
+  info:
+    title: Artūra Puntes • A Poetic Tribute
+    description: ''
+  coverColor: '#B58500'
+  pages:
+    - artura/2-3.jpg
+    - artura/4-5.jpg
+    - artura/6-7.jpg
+    - artura/8-9.jpg
+    - artura/10-11.jpg
+    - artura/12-13.jpg
+    - artura/14-15.jpg
+  pagesAspectRatio: 1.5249714068
+
+- type: image
+  category: books
+  name: zorzs
+  src: zorzs.jpeg
+  backgroundColor: rgb(223, 224, 226)
+  info:
+    title: Žoržs Ualliks • Redzu Dzirdu Klusēju
+    description: ''
+  coverColor: '#25282A'
+  pages:
+    - zorzs/10-11r.jpg
+    - zorzs/48-49r.jpg
+    - zorzs/50-51r.jpg
+    - zorzs/84-85r.jpg
+    - zorzs/10-11l.jpg
+    - zorzs/48-49l.jpg
+    - zorzs/50-51l.jpg
+    - zorzs/84-85l.jpg
+  pagesAspectRatio: 1.9970044933
+
+- type: image
+  category: books
+  name: semions
+  src: semions.jpeg
+  backgroundColor: rgb(220, 220, 220)
+  info:
+    title: Semjons Haņins • Swim
+    description: ''
+  coverColor: '#004F71'
+  pages:
+    - semions/cyr/12-13.jpg
+    - semions/cyr/20-21.jpg
+    - semions/cyr/54-55.jpg
+    - semions/cyr/58-59.jpg
+    - semions/cyr/70-71.jpg
+    - semions/lat/12-13.jpg
+    - semions/lat/24-25.jpg
+    - semions/lat/30-31.jpg
+    - semions/lat/38-39.jpg
+    - semions/lat/42-43.jpg
+    - semions/lat/72-73.jpg
+  pagesAspectRatio: 1.4054813774
 
 - type: image
   category: books
@@ -43,43 +77,28 @@
   backgroundColor: rgb(241, 240, 238)
   info:
     title: Tal
-    description: Ipsam porro illum esse. Placeat ex sed quia harum a neque. Repellendus consequatur voluptas. Cum quae qui aliquid rem qui consectetur. Sed distinctio reprehenderit et quia consequuntur odio dolor in. Laboriosam officiis soluta provident saepe consequatur ea.
+    description: ''
 
 - type: image
   category: books
-  name: semions
-  src: semions.jpeg
-  backgroundColor: rgb(220, 220, 220)
+  name: used
+  src: b-y.jpeg
+  backgroundColor: rgb(199, 193, 193)
   info:
-    title: Semions
-    description: At praesentium accusantium fugiat qui. Atque incidunt aut aliquam totam. Laboriosam ducimus dolorum. Omnis et animi delectus et non aut.
-
-- type: image
-  category: books
-  name: semions-int
-  src: semions-int.jpeg
-  backgroundColor: rgb(220, 218, 219)
-  info:
-    title: Semions-Int
-    description: Est ex aliquam. Eligendi accusamus sint itaque consequuntur.
-
-- type: image
-  category: books
-  name: z-magnet
-  src: z-magnet.jpeg
-  backgroundColor: rgb(227, 229, 228)
-  info:
-    title: Z-Magnet
-    description: Dolorem accusamus illo unde voluptatem minus placeat repellendus voluptatum. Pariatur accusamus debitis sit consectetur odio sint aliquam aut. Dolorem voluptas quis dicta et laborum. Non ab nam est iure ab architecto eos autem. Eum et consequatur itaque autem laborum.
-
-- type: image
-  category: books
-  name: zorzs
-  src: zorzs.jpeg
-  backgroundColor: rgb(223, 224, 226)
-  info:
-    title: Zorzs
-    description: Et sed sed fugiat. Quidem minima vel dolorem in.
+    title: Vladimir Svetlov • /used/
+    description: |
+      Edited by Alexander Zapol
+      Latvian translators: Ingmāra Balode, Pēteris Draguns, Marts Pujāts, Arvis Viguls
+      English translator Kevin M. F. Platt
+      Designer Ieva Skuja
+      Published by Orbita (Riga, 2014)
+      Photography by Vladimir Svetlov & Anna Volkova
+  coverColor: '#D3BC8D'
+  pages:
+    - b-y/18-19.jpg
+    - b-y/28-29.jpg
+    - b-y/44-45.jpg
+  pagesAspectRatio: 1.3961605585
 
 - type: video
   category: videos

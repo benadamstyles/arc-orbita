@@ -22,6 +22,7 @@ export type Image = $ReadOnly<{|
   name: string,
   src: string,
   backgroundColor: string,
+  coverColor: string,
   info: {
     title: string,
     description: string,
