@@ -78,7 +78,6 @@ export default withFutureState(
       toggle = () => this.setState(({expanded}) => ({expanded: !expanded}))
 
       render() {
-        console.log(this.props.description)
         return (
           <Fragment>
             <Maximized
