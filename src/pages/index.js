@@ -31,7 +31,7 @@ export const Intro = DisplaceAbsolute(
       <Link to="/">
         <FeatureImg src={getImagePath('orbita-trans.png')} />
       </Link>
-      <FeatureText>Welcome to the Arc Orbita website.</FeatureText>
+      <FeatureText>Orbita: The Project</FeatureText>
     </div>
   ),
   {padding: '1rem'}

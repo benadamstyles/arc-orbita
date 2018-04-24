@@ -14,6 +14,7 @@ export type Video = $ReadOnly<{|
     title: string,
     description: string,
   },
+  isCategorySample?: true,
 |}>
 
 export type Image = $ReadOnly<{|
@@ -28,7 +29,8 @@ export type Image = $ReadOnly<{|
     description: string,
   },
   pages?: $ReadOnlyArray<string>,
-  pagesAspectRatio?: number
+  pagesAspectRatio?: number,
+  isCategorySample?: true,
 |}>
 
 export type ContentUnion = Video | Image

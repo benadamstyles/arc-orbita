@@ -78,7 +78,9 @@ export default {
         getData: () => ({
           categories,
           sampleItems: categories.map(category =>
-            data.find(item => item.category === category)
+            data.find(
+              item => item.category === category && item.isCategorySample
+            )
           ),
         }),
 

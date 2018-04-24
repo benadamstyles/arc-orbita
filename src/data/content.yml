@@ -26,6 +26,7 @@
     - artura/12-13.jpg
     - artura/14-15.jpg
   pagesAspectRatio: 1.5249714068
+  isCategorySample: true
 
 - type: image
   category: books
@@ -110,6 +111,7 @@
   info:
     title: Time Room
     description: Аудио-видеоинсталляция "Комната времени". Рига, 30 августа 2008, форум современной культуры "Белая ночь".
+  isCategorySample: true
 
 - type: video
   category: videos
