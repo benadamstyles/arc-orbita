@@ -15,11 +15,11 @@
     "deploy": "yarn build && yarn run upload-site",
     "postdeploy": "echo https://www.arcpublications.co.uk/orbita/",
     "serve": "serve dist -p 3000",
-    "flow": "flow --color=always",
+    "flow": "flow check",
     "glow": "glow --watch !node_modules/*",
     "flow-typed": "flow-typed install --skip",
     "lint": "eslint .",
-    "test": "yarn lint && yarn run flow && yarn build"
+    "test": "yarn lint && yarn flow && yarn build"
   },
   "dependencies": {
     "fluture": "^8.0.2",

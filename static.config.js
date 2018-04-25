@@ -51,26 +51,6 @@ export default {
 
     const categories = [...getAllCategories(data)]
 
-    // const paths = {
-    //   '/': {page: '/'},
-    //   '/books': {page: '/category', query: {category: 'books'}},
-    //   '/videos': {page: '/category', query: {category: 'videos'}},
-    //   '/artura': {page: '/item', query: {name: 'artura'}},
-    //   '/used': {page: '/item', query: {name: 'used'}},
-    //   '/stereo': {page: '/item', query: {name: 'stereo'}},
-    //   '/tal': {page: '/item', query: {name: 'tal'}},
-    //   '/semions': {page: '/item', query: {name: 'semions'}},
-    //   '/semions-int': {page: '/item', query: {name: 'semions-int'}},
-    //   '/z-magnet': {page: '/item', query: {name: 'z-magnet'}},
-    //   '/zorzs': {page: '/item', query: {name: 'zorzs'}},
-    //   '/time-room': {page: '/item', query: {name: 'time-room'}},
-    //   '/right': {page: '/item', query: {name: 'right'}},
-    //   '/orchestral-rehearsal': {
-    //     page: '/item',
-    //     query: {name: 'orchestral-rehearsal'},
-    //   },
-    // }
-
     return [
       {
         path: '/',
