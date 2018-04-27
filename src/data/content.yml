@@ -165,11 +165,90 @@
 
 - type: video
   category: videos
+  name: orchestra-rehearsal
+  src: https://player.vimeo.com/video/155541855
+  thumb: video-thumbs/orchestra-rehearsal.jpg
+  backgroundColor: black
+  mainColor: rgb(135, 176, 175)
+  info:
+    title: Orchestra Rehearsal
+    description: Сергей Тимофеев и Виктор Вилкс. Репетиция оркестра / Sergej Timofejev & Victor Vilks.
+
+- type: video
+  category: videos
+  name: sveta
+  src: https://player.vimeo.com/video/117083159
+  thumb: video-thumbs/sveta.jpg
+  backgroundColor: black
+  mainColor: rgb(234, 205, 145)
+  info:
+    title: Sveta
+    description: |
+      From DVD “Orbita 4”
+      Text: Sergej Timofeyev
+      Video: Diana Palijchuk
+
+- type: video
+  category: videos
+  name: tallinas-street
+  src: https://player.vimeo.com/video/66493631
+  thumb: video-thumbs/tallinas-street.jpg
+  backgroundColor: black
+  mainColor: rgb(22, 19, 13)
+  info:
+    title: Tallinas Street, videopoem
+    description: |
+      Poem: Artūrs Punte
+      Music: Linda Leimane
+
+- type: video
+  category: videos
+  name: man-and-woman
+  src: https://player.vimeo.com/video/66347374
+  thumb: video-thumbs/man-and-woman.jpg
+  backgroundColor: black
+  mainColor: rgb(20, 20, 20)
+  info:
+    title: Man and Woman
+    description: |
+      Video by Edmunds Jansons, based on the poem of Sergej Timofejev.
+      Music: OID, Serendipity.
+
+- type: video
+  category: videos
+  name: physicist
+  src: https://www.youtube-nocookie.com/embed/9tkURZLfG1s?rel=0&amp;showinfo=0
+  thumb: video-thumbs/physicist.png
+  backgroundColor: black
+  mainColor: rgb(188, 174, 178)
+  info:
+    title: Physicist
+    description: |
+      From DVD “Orbita 4”
+      Text: Sergei Timofeyev
+      Video: Diana Palijchuk, Artur Punte.
+
+- type: video
+  category: videos
+  name: neither-tomorrow-nor-today
+  src: https://www.youtube-nocookie.com/embed/wugk1VsPhV8?rel=0&amp;showinfo=0
+  thumb: video-thumbs/neither-tomorrow-nor-today.png
+  backgroundColor: black
+  mainColor: rgb(190, 203, 196)
+  info:
+    title: Neither Tomorrow nor Today
+    description: |
+      From DVD “Orbita 4”
+      Text: Semyon Khanin
+      Video: Edmunds Jansons
+
+- type: video
+  category: videos
   name: time-room
   src: https://www.youtube-nocookie.com/embed/7LnPnME38mU?rel=0&amp;showinfo=0
   thumb: video-thumbs/time-room.jpg
   backgroundColor: black
-  mainColor: black
+  mainColor: rgb(27, 25, 20)
   info:
     title: Time Room
     description: Аудио-видеоинсталляция "Комната времени". Рига, 30 августа 2008, форум современной культуры "Белая ночь".
@@ -181,7 +260,7 @@
   src: https://www.youtube-nocookie.com/embed/9biz1-l29Yk?rel=0&amp;showinfo=0
   thumb: video-thumbs/right.jpg
   backgroundColor: white
-  mainColor: rgb(175, 179, 160)
+  mainColor: rgb(142, 142, 133)
   info:
     title: Right, kinetic poem
     description: |
@@ -189,14 +268,3 @@
       Idea: Arturs Punte
       Design: Eugene Sysoev
       Text: Sergei Timofejev
-
-- type: video
-  category: videos
-  name: orchestra-rehearsal
-  src: https://player.vimeo.com/video/155541855
-  thumb: video-thumbs/orchestra-rehearsal.jpg
-  backgroundColor: black
-  mainColor: rgb(175, 179, 160)
-  info:
-    title: Orchestra Rehearsal
-    description: Сергей Тимофеев и Виктор Вилкс. Репетиция оркестра / Sergej Timofejev & Victor Vilks.
