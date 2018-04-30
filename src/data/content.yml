@@ -103,7 +103,7 @@
 
 - type: image
   category: publications
-  name: Orbita 5
+  name: orbita-5
   src: orbita-5.jpg
   backgroundColor: rgb(232, 232, 233)
   info:

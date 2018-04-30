@@ -64,19 +64,21 @@ export default {
           ),
         }),
 
-        children: categories.map(category => ({
-          path: category,
-          component: 'src/pages/category',
-          getData: () => ({
-            items: data.filter(item => item.category === category),
-          }),
+        children: categories.map(category => {
+          const items = data.filter(item => item.category === category)
 
-          children: data.map(item => ({
-            path: item.name,
-            component: 'src/pages/item',
-            getData: () => ({item}),
-          })),
-        })),
+          return {
+            path: category,
+            component: 'src/pages/category',
+            getData: () => ({items}),
+
+            children: items.map(item => ({
+              path: item.name,
+              component: 'src/pages/item',
+              getData: () => ({item}),
+            })),
+          }
+        }),
       },
 
       {

@@ -4,6 +4,7 @@
 [include]
 
 [libs]
+./node_modules/@iml/flow-highland/flow-typed/highland.js
 
 [lints]
 all=warn
