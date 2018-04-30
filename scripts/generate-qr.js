@@ -1,9 +1,8 @@
 // @flow
 
-import fs from 'fs'
-import {promisify} from 'util'
+import {readFile, emptyDir, createWriteStream} from 'fs-extra'
 import convexqr from 'convexqr'
-import _ from 'highland'
+import highland from 'highland'
 import sitemap from 'sitemap-urls'
 
 const generateQR = (text: string): Promise<stream$Readable> =>
@@ -11,13 +10,15 @@ const generateQR = (text: string): Promise<stream$Readable> =>
 
 const main = async () => {
   const urls: Array<string> = sitemap.extractUrls(
-    await promisify(fs.readFile)('./dist/sitemap.xml')
+    await readFile('./dist/sitemap.xml')
   )
+
+  await emptyDir('./qr-codes')
 
   return Promise.all(
     urls.map(async url =>
-      _(await generateQR(url)).pipe(
-        fs.createWriteStream(
+      highland(await generateQR(url)).pipe(
+        createWriteStream(
           `./qr-codes/${url
             .replace('https://www.arcpublications.co.uk/orbita', '')
             .replace(/\W/g, '-')
@@ -29,6 +30,6 @@ const main = async () => {
   )
 }
 
-main().catch(e => {
+main().catch((e: Error) => {
   throw e
 })
