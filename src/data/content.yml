@@ -232,7 +232,7 @@
   category: videos
   name: neither-tomorrow-nor-today
   src: https://www.youtube-nocookie.com/embed/wugk1VsPhV8?rel=0&amp;showinfo=0
-  thumb: video-thumbs/neither-tomorrow-nor-today.png
+  thumb: video-thumbs/neither-tomorrow-nor-today.jpg
   backgroundColor: black
   mainColor: rgb(190, 203, 196)
   info:
@@ -241,6 +241,32 @@
       From DVD “Orbita 4”
       Text: Semyon Khanin
       Video: Edmunds Jansons
+
+- type: video
+  category: videos
+  name: talk-with
+  src: https://player.vimeo.com/video/159253794
+  thumb: video-thumbs/talk-with.png
+  backgroundColor: black
+  mainColor: rgb(34, 34, 34)
+  info:
+    title: Semyon Khanin, Talk with...
+    description: |
+      Video: Katrina Neiburga
+      Music: Special orchestra – Karl Khlamkin, percussion, Inna Raihman, violin, Signe Sirma, saxophone, Peteris Draguns, harmonium.
+      Sound: Ivar Vigner
+      English sublitles: Lena Shakur
+
+- type: video
+  category: videos
+  name: guest-workers
+  src: https://www.youtube-nocookie.com/embed/wugk1VsPhV8?rel=0&amp;showinfo=0
+  thumb: video-thumbs/guest-workers.jpg
+  backgroundColor: black
+  mainColor: rgb(110, 101, 97)
+  info:
+    title: Guest Workers
+    description: ''
 
 - type: video
   category: videos
