@@ -9,6 +9,7 @@ import Thumb from '../components/content/thumb'
 import Page from '../components/layout/page'
 import Global from '../components/meta/global'
 import {getImagePath} from '../util/path'
+import {getItemImage} from '../util/item'
 import {Intro} from './index'
 
 const ContentWrapper = ({items}) => (
@@ -19,7 +20,7 @@ const ContentWrapper = ({items}) => (
           <Fade key={item.src} left={isEven} right={!isEven}>
             <Thumb
               category={item.category}
-              src={getImagePath(item.type === 'video' ? item.thumb : item.src)}
+              src={getImagePath(getItemImage(item))}
               name={item.name}
               isLastItem={i === length - 1}
             />

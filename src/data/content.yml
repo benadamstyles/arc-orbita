@@ -260,13 +260,43 @@
 - type: video
   category: videos
   name: guest-workers
-  src: https://www.youtube-nocookie.com/embed/wugk1VsPhV8?rel=0&amp;showinfo=0
+  src: https://www.youtube-nocookie.com/embed/NglIDyU_410?rel=0&amp;showinfo=0
   thumb: video-thumbs/guest-workers.jpg
   backgroundColor: black
   mainColor: rgb(110, 101, 97)
   info:
     title: Guest Workers
     description: ''
+
+- type: image
+  category: online
+  name: tv-sms
+  src: online/sms.jpg
+  backgroundColor: rgb(2, 4, 2)
+  info:
+    title: TV SMS
+    description: Taking over TV SMS chat (very popular around year 2005) and transforming it into an environment for poetry improvisation
+
+- type: image
+  category: online
+  name: i-am-the-text
+  src: online/i-am-the-text.jpg
+  backgroundColor: rgb(254, 255, 255)
+  info:
+    title: I Am the Text
+    description: A poem in computer-game form
+  isCategorySample: true
+
+- type: audio
+  category: radio
+  name: marx-fm
+  src: marx-fm.mp3
+  thumb: radio/marx-fm.jpg
+  backgroundColor: rgb(255, 255, 255)
+  info:
+    title: MarxFM
+    description: "TODO:"
+  isCategorySample: true
 
 - type: video
   category: videos

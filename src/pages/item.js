@@ -1,7 +1,6 @@
 // @flow
 
 import React, {PureComponent, type ElementType} from 'react'
-import styled from 'styled-components'
 import {maybe} from 'maybes'
 import {Link, withRouteData} from 'react-static'
 import type {ContentUnion} from '../data/content.yml'
@@ -9,8 +8,10 @@ import Global from '../components/meta/global'
 import Page from '../components/layout/page'
 import Info from '../components/content/info'
 import Video from '../components/content/video'
+import Audio from '../components/content/audio'
+import Image from '../components/content/image'
 import Flip from '../components/content/flip'
-import {getImagePath} from '../util/path'
+import {getImagePath, getAudioPath} from '../util/path'
 
 const styles = {
   info: {
@@ -23,7 +24,23 @@ const styles = {
   },
 }
 
-const Image = styled.img``
+const ContentSwitch = ({item}: {item: ContentUnion}) => {
+  if (item.type === 'image') {
+    return <Image src={getImagePath(item.src)} />
+  } else if (item.type === 'video') {
+    return <Video {...item} />
+  } else if (item.type === 'audio') {
+    return (
+      <Audio
+        src={getAudioPath(item.src)}
+        backgroundColor={item.backgroundColor}
+        thumb={item.thumb}
+      />
+    )
+  } else {
+    return null
+  }
+}
 
 type Props = {
   item: ContentUnion,
@@ -70,11 +87,7 @@ class ItemPage extends PureComponent<Props, State> {
         {/* NOTE: hackfix https://github.com/nozzle/react-static/issues/569 */}
         <Link to={`/${item.category}`} />
 
-        {item.type === 'image' ? (
-          <Image src={getImagePath(item.src)} />
-        ) : (
-          <Video {...item} />
-        )}
+        <ContentSwitch item={item} />
 
         {item.type === 'image' &&
           maybe(item.pages)

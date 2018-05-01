@@ -10,6 +10,7 @@ import Page from '../components/layout/page'
 import Global from '../components/meta/global'
 import {primaryColor} from '../constants/style/colors'
 import {getImagePath} from '../util/path'
+import {getItemImage} from '../util/item'
 
 // if (process.env.NODE_ENV !== 'production') {
 //   const {whyDidYouUpdate} = require('why-did-you-update')
@@ -44,9 +45,7 @@ const ContentWrapper = ({categories, sampleItems}) => (
         .map(firstItem => (
           <Category
             key={category}
-            src={getImagePath(
-              firstItem.type === 'video' ? firstItem.thumb : firstItem.src
-            )}
+            src={getImagePath(getItemImage(firstItem))}
             name={category}
             isLastItem={i === length - 1}
           />

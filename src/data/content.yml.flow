@@ -1,6 +1,6 @@
 // @flow
 
-export type Category = 'books' | 'videos'
+export type Category = 'books' | 'videos' | 'publications' | 'online' | 'radio'
 
 export type Video = $ReadOnly<{|
   type: 'video',
@@ -33,6 +33,20 @@ export type Image = $ReadOnly<{|
   isCategorySample?: true,
 |}>
 
-export type ContentUnion = Video | Image
+export type Audio = $ReadOnly<{|
+  type: 'audio',
+  category: Category,
+  name: string,
+  src: string,
+  thumb: string,
+  backgroundColor: string,
+  info: {
+    title: string,
+    description: string,
+  },
+  isCategorySample?: true,
+|}>
+
+export type ContentUnion = Video | Image | Audio
 
 declare module.exports: $ReadOnlyArray<ContentUnion>

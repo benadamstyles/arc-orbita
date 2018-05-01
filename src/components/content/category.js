@@ -3,6 +3,7 @@
 import React, {type Node} from 'react'
 import {Link} from 'react-static'
 import styled from 'styled-components'
+import {primaryColor} from '../../constants/style/colors'
 
 type ImageContainerProps = {
   isLastItem: boolean,
@@ -33,7 +34,7 @@ export const Header = styled.h1`
   text-align: center;
   font-weight: bold;
   font-family: sans-serif;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  text-shadow: 3px 3px 2px ${primaryColor};
   font-size: 4em;
 `
 
