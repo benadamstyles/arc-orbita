@@ -3,7 +3,6 @@
 import React, {type Node} from 'react'
 import {Link} from 'react-static'
 import styled from 'styled-components'
-import {primaryColor} from '../../constants/style/colors'
 
 type ImageContainerProps = {
   isLastItem: boolean,
@@ -23,7 +22,8 @@ const ImageContainerStyled = styled.div`
 export const ImageElement = styled.div`
   width: 100%;
   height: 100%;
-  background-image: url(${({source}) => source});
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url(${({source}) => source});
   background-size: cover;
   background-position: center;
 `
@@ -34,7 +34,7 @@ export const Header = styled.h1`
   text-align: center;
   font-weight: bold;
   font-family: sans-serif;
-  text-shadow: 3px 3px 2px ${primaryColor};
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
   font-size: 4em;
 `
 
