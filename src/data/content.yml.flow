@@ -1,6 +1,12 @@
 // @flow
 
-export type Category = 'books' | 'videos' | 'publications' | 'online' | 'radio'
+export type Category =
+  | 'books'
+  | 'videos'
+  | 'publications'
+  | 'online'
+  | 'radio'
+  | 'installations'
 
 export type Video = $ReadOnly<{|
   type: 'video',

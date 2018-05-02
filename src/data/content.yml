@@ -294,8 +294,13 @@
   thumb: radio/marx-fm.jpg
   backgroundColor: rgb(255, 255, 255)
   info:
-    title: MarxFM
-    description: "TODO:"
+    title: Marx FM
+    description: |
+      September 5 - 11, 2013, Rīga
+
+      The mobile pirate radio station Marx FM was located in the attic of a five-storey building in the very center of Rīga, the building of the annual exhibition of the Contemporary Art Center “Survival Kit”, and broadcast poetry readings at 104.8 MHz FM. The station operated simultaneously online.
+
+      The station continued for 7 days and was closed by the “Ether Police” - the “Electronic Communications Office of Latvia” – on an urgent request. Later, the “pirates” were sentenced to 150 lats, which the Latvian Centre for Contemporary Art kindly helped to cover.
   isCategorySample: true
 
 - type: video
@@ -324,3 +329,20 @@
       Idea: Arturs Punte
       Design: Eugene Sysoev
       Text: Sergei Timofejev
+
+- type: video
+  category: installations
+  name: object-no-1
+  src: https://www.youtube-nocookie.com/embed/tVsbwGpVhL4?rel=0&amp;showinfo=0
+  thumb: video-thumbs/object-no-1.jpg
+  backgroundColor: black
+  mainColor: rgb(207, 186, 147)
+  info:
+    title: Artur Punte • Object No. 1
+    description: |
+      A multi-channel sound object in which each face corresponds to one day of the working week, and the audio recording from it lasts the duration of a typical commute from home to work. The audio text is made up of the daily phrases of Latvian state radio.
+
+      Technician: Екабс Волатовскис
+      Video: Reinys Inkens
+      2013
+  isCategorySample: true
