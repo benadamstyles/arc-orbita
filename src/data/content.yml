@@ -329,9 +329,25 @@
     description: |
       A multi-channel sound object in which each face corresponds to one day of the working week, and the audio recording from it lasts the duration of a typical commute from home to work. The audio text is made up of the daily phrases of Latvian state radio.
 
-      Technician: Екабс Волатовскис
-      Video: Reinys Inkens
+      **Technician:** Екабс Волатовскис
+      **Video:** Reinys Inkens
       2013
+
+- type: video
+  category: installations
+  name: object-no-3
+  src: https://www.youtube-nocookie.com/embed/uWALHFzcszA?rel=0&amp;showinfo=0
+  thumb: video-thumbs/object-no-3.jpg
+  backgroundColor: black
+  mainColor: rgb(51, 51, 54)
+  info:
+    title: Artur Punte • Object No. 3
+    description: |
+      A multichannel coordinate-based sound surface on which you can move the head of the stethoscope to access different audio zones. The recordings assess the successes and failures of an ambivalent lyrical hero, from forthright efforts to inaction and from success to failure – and all possible intermediate gradations.
+
+      **Technical solution:** Evgeny Sysoev
+      **Video:** Reinis Inkens
+      2014
 
 - type: video
   category: installations
