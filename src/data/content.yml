@@ -396,3 +396,14 @@
 
       Orbita had been experimenting with radio waves and FM-transmitters for two years in their performances; the concept of the Radio Wall was first presented to a wider audience as part of the ‘FM Slow Show: Poetic Meditation in Radio Waves and City Noises’. During the performance, five poets read their works accompanied by a background of city noises recorded during their travels to different European cities. The recorded noises are transmitted by FM radio waves, received and played back during the performance with the help of small portable radio sets. The subject – radio, message and media noise – is also elaborated by Orbita in their Radiowall installation, created especially for the Cēsis Art Festival. It is specially designed and constructed 10-metre long and 2-metre tall wall featuring numerous built-in radio receivers of various sizes and strength, tuned to different FM frequencies. The radio sets broadcast specially compiled collages of poetry and music which will were recorded and treated during the preparation stage of the project. The Radio Wall installation invites the visitors to enjoy the work of art at their leisure; people are able to spend an unlimited amount of time exploring it – moving on unhurriedly, metre after metre, radio channel after radio channel, until they find something that speaks to them personally, be it a poem, a melody or the sounds of a storm outside the window in a small Lithuanian town or perhaps in Helsinki.
   isCategorySample: true
+
+- type: video
+  category: installations
+  name: power-independent-poetry
+  src: https://player.vimeo.com/video/160963729
+  thumb: video-thumbs/power-independent-poetry.jpg
+  backgroundColor: black
+  mainColor: rgb(44, 29, 12)
+  info:
+    title: Power Independent Poetry
+    description: ''
