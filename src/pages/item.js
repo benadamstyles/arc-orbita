@@ -7,7 +7,7 @@ import type {ContentUnion} from '../data/content.yml'
 import Global from '../components/meta/global'
 import Page from '../components/layout/page'
 import Info from '../components/content/info'
-import Video from '../components/content/video'
+import Video, {defaultIframeProps} from '../components/content/video'
 import Audio from '../components/content/audio'
 import Image from '../components/content/image'
 import Flip from '../components/content/flip'
@@ -94,6 +94,21 @@ class ItemPage extends PureComponent<Props, State> {
             .flatMap(pages =>
               maybe(this.state.FlipPage).map(FlipPage => (
                 <Flip item={item} pages={pages} FlipPage={FlipPage} />
+              ))
+            )
+            .orJust(null)}
+
+        {item.type === 'image' &&
+          maybe(item.videos)
+            .map(videos =>
+              videos.map(video => (
+                <iframe
+                  key={video}
+                  src={video}
+                  {...defaultIframeProps}
+                  width="640"
+                  height="360"
+                />
               ))
             )
             .orJust(null)}

@@ -17,7 +17,10 @@ const ContentWrapper = ({items}) => (
     {items.map((item, i, {length}) =>
       rapt(i % 2 === 0)
         .map(isEven => (
-          <Fade key={item.src} left={isEven} right={!isEven}>
+          <Fade
+            key={Array.isArray(item.src) ? item.src[0] : item.src}
+            left={isEven}
+            right={!isEven}>
             <Thumb
               category={item.category}
               src={getImagePath(getItemImage(item))}

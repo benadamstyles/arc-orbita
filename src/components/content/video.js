@@ -1,6 +1,6 @@
 // @flow
 
-import React from 'react'
+import React, {PureComponent} from 'react'
 import styled from 'styled-components'
 import {primaryColor} from '../../constants/style/colors'
 
@@ -23,25 +23,42 @@ const Iframe = styled.iframe`
   height: 100%;
 `
 
+export const defaultIframeProps = {
+  frameBorder: '0',
+  webkitallowfullscreen: 'true',
+  mozallowfullscreen: 'true',
+  allowFullScreen: 'true',
+}
+
 type Props = {
-  src: string,
+  src: string | $ReadOnlyArray<string>,
   mainColor: string,
 }
 
-const Video = (props: Props) => (
-  <Wrapper>
-    <VideoContainer style={{backgroundColor: props.mainColor}}>
-      <Iframe
+const Video = (props: Props) =>
+  Array.isArray(props.src) ? (
+    props.src.map(src => (
+      <iframe
+        key={src}
+        src={src}
+        {...defaultIframeProps}
         width="640"
         height="360"
-        src={`${props.src}?color=${primaryColor.substr(1)}&byline=0&portrait=0`}
-        frameBorder="0"
-        webkitallowfullscreen
-        mozallowfullscreen
-        allowfullscreen
       />
-    </VideoContainer>
-  </Wrapper>
-)
+    ))
+  ) : (
+    <Wrapper>
+      <VideoContainer style={{backgroundColor: props.mainColor}}>
+        <Iframe
+          width="640"
+          height="360"
+          src={`${props.src}?color=${primaryColor.substr(
+            1
+          )}&byline=0&portrait=0`}
+          {...defaultIframeProps}
+        />
+      </VideoContainer>
+    </Wrapper>
+  )
 
 export default Video

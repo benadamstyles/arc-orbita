@@ -4,11 +4,12 @@ import React, {PureComponent, Fragment} from 'react'
 import styled from 'styled-components'
 import withFutureState from 'set-future-state'
 import {after} from 'fluture'
+import Markdown from 'react-markdown'
 import {primaryColor} from '../../constants/style/colors'
 
 const Box = styled.div`
   transition: opacity 0.2s ease-out;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.7);
   border-radius: 0.7rem;
   overflow: hidden;
   margin-right: ${({style}) => style.left};
@@ -26,6 +27,8 @@ const ScalingBox = Box.extend`
 
 const BoxContent = styled.div`
   padding: 0.7rem;
+  max-height: 80vh;
+  overflow-y: scroll;
 `
 
 const Button = styled.button.attrs({type: 'button'})`
@@ -48,7 +51,9 @@ const Maximized = ({style, onClick, visible, title, description}) => (
   <ScalingBox style={style} visible={visible}>
     <BoxContent>
       <h1>{title}</h1>
-      <Description>{description}</Description>
+      <Description>
+        <Markdown source={description} />
+      </Description>
     </BoxContent>
     <Button onClick={onClick}>Hide</Button>
   </ScalingBox>
