@@ -54,7 +54,7 @@
   src: semions.jpeg
   backgroundColor: rgb(220, 220, 220)
   info:
-    title: Semjons Haņins • Swim
+    title: Semjons Haņins • Swimming
     description: ''
   coverColor: '#004F71'
   pages:
@@ -69,6 +69,8 @@
     - semions/lat/38-39.jpg
     - semions/lat/42-43.jpg
     - semions/lat/72-73.jpg
+  videos:
+    - https://player.vimeo.com/video/78106004
   pagesAspectRatio: 1.4054813774
 
 - type: image
@@ -241,6 +243,7 @@
       From DVD “Orbita 4”
       Text: Semyon Khanin
       Video: Edmunds Jansons
+  isCategorySample: true
 
 - type: video
   category: videos
@@ -285,6 +288,17 @@
   info:
     title: I Am the Text
     description: A poem in computer-game form
+
+- type: image
+  category: online
+  name: white-night
+  src: online/white-night.jpg
+  backgroundColor: black
+  info:
+    title: White Night, 2013
+    description: A database of all textual graffities found in Čiekurkalns district, transformed into software that allows you to use these words to make your own poem and sends it to your email address.
+  videos:
+    - https://www.youtube-nocookie.com/embed/qbYRgdZP6Xw?rel=0&amp;showinfo=0
   isCategorySample: true
 
 - type: audio
@@ -304,33 +318,6 @@
   isCategorySample: true
 
 - type: video
-  category: videos
-  name: time-room
-  src: https://www.youtube-nocookie.com/embed/7LnPnME38mU?rel=0&amp;showinfo=0
-  thumb: video-thumbs/time-room.jpg
-  backgroundColor: black
-  mainColor: rgb(27, 25, 20)
-  info:
-    title: Time Room
-    description: Аудио-видеоинсталляция "Комната времени". Рига, 30 августа 2008, форум современной культуры "Белая ночь".
-  isCategorySample: true
-
-- type: video
-  category: videos
-  name: right
-  src: https://www.youtube-nocookie.com/embed/9biz1-l29Yk?rel=0&amp;showinfo=0
-  thumb: video-thumbs/right.jpg
-  backgroundColor: white
-  mainColor: rgb(142, 142, 133)
-  info:
-    title: Right, kinetic poem
-    description: |
-      Installation "Right. Kinetic poem" for exhibition in the KIM? contemporary art center (www.kim.lv).
-      Idea: Arturs Punte
-      Design: Eugene Sysoev
-      Text: Sergei Timofejev
-
-- type: video
   category: installations
   name: object-no-1
   src: https://www.youtube-nocookie.com/embed/tVsbwGpVhL4?rel=0&amp;showinfo=0
@@ -345,4 +332,51 @@
       Technician: Екабс Волатовскис
       Video: Reinys Inkens
       2013
+
+- type: video
+  category: installations
+  name: right-kinetic-poem
+  src: https://www.youtube-nocookie.com/embed/9biz1-l29Yk?rel=0&amp;showinfo=0
+  thumb: video-thumbs/right.jpg
+  backgroundColor: white
+  mainColor: rgb(142, 142, 133)
+  info:
+    title: Right, kinetic poem
+    description: |
+      Installation “Right. Kinetic poem”
+      Exhibited in the [KIM? contemporary art center](http://kim.lv/en/)
+      **Idea:** Arturs Punte
+      **Design:** Eugene Sysoev
+      **Text:** Sergei Timofejev
+
+- type: video
+  category: installations
+  name: time-room
+  src: https://www.youtube-nocookie.com/embed/7LnPnME38mU?rel=0&amp;showinfo=0
+  thumb: video-thumbs/time-room.jpg
+  backgroundColor: black
+  mainColor: rgb(27, 25, 20)
+  info:
+    title: Time Room
+    description: |
+      A visual poem about the short unmeaning activities which fill up our everyday lives. Illustrated by short animated clips which were screened on the walls and the roof of a house-shaped construction.
+
+- type: video
+  category: installations
+  name: radio-wall
+  src:
+    - https://www.youtube-nocookie.com/embed/O4ophKp6XSs?rel=0&amp;showinfo=0
+    - https://www.youtube-nocookie.com/embed/4Wy81I_GC-g?rel=0&amp;showinfo=0
+    - https://player.vimeo.com/video/86240806
+  thumb: video-thumbs/radio-wall.jpg
+  backgroundColor: black
+  mainColor: rgb(208, 191, 166)
+  info:
+    title: Radio Wall
+    description: |
+      Radio Wall at Cēsis Art Festival 2012
+
+      **Аuthors:** Artur Punte, Sergej Timofejev, Eugene Sysoev, Vladimir Svetlov, Semjon Hanin
+
+      Orbita had been experimenting with radio waves and FM-transmitters for two years in their performances; the concept of the Radio Wall was first presented to a wider audience as part of the ‘FM Slow Show: Poetic Meditation in Radio Waves and City Noises’. During the performance, five poets read their works accompanied by a background of city noises recorded during their travels to different European cities. The recorded noises are transmitted by FM radio waves, received and played back during the performance with the help of small portable radio sets. The subject – radio, message and media noise – is also elaborated by Orbita in their Radiowall installation, created especially for the Cēsis Art Festival. It is specially designed and constructed 10-metre long and 2-metre tall wall featuring numerous built-in radio receivers of various sizes and strength, tuned to different FM frequencies. The radio sets broadcast specially compiled collages of poetry and music which will were recorded and treated during the preparation stage of the project. The Radio Wall installation invites the visitors to enjoy the work of art at their leisure; people are able to spend an unlimited amount of time exploring it – moving on unhurriedly, metre after metre, radio channel after radio channel, until they find something that speaks to them personally, be it a poem, a melody or the sounds of a storm outside the window in a small Lithuanian town or perhaps in Helsinki.
   isCategorySample: true
