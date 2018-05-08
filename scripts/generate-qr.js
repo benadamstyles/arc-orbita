@@ -9,7 +9,12 @@ import yaml from 'js-yaml'
 import typeof Data from '../src/data/content.yml'
 import {findByName} from '../src/util/data'
 
-const getThumbnail = item => (item.type === 'image' ? item.src : item.thumb)
+const getThumbnail = item =>
+  item.type === 'image'
+    ? Array.isArray(item.src)
+      ? item.src[0]
+      : item.src
+    : item.thumb
 
 const generateQR = (text: string): Promise<stream$Readable> =>
   new Promise(resolve => convexqr({text}, resolve))
@@ -55,5 +60,6 @@ const main = async () => {
 
 main().catch((e: Error) => {
   console.error(e)
+  // eslint-disable-next-line no-process-exit
   process.exit(1)
 })

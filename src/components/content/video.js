@@ -1,6 +1,6 @@
 // @flow
 
-import React, {PureComponent} from 'react'
+import React, {type Element} from 'react'
 import styled from 'styled-components'
 import {primaryColor} from '../../constants/style/colors'
 
@@ -37,7 +37,7 @@ type Props = {
 
 const Video = (props: Props) =>
   Array.isArray(props.src) ? (
-    props.src.map(src => (
+    (props.src.map(src => (
       <iframe
         key={src}
         src={src}
@@ -45,7 +45,7 @@ const Video = (props: Props) =>
         width="640"
         height="360"
       />
-    ))
+    )): $ReadOnlyArray<Element<'iframe'>>)
   ) : (
     <Wrapper>
       <VideoContainer style={{backgroundColor: props.mainColor}}>

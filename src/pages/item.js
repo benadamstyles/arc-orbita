@@ -26,7 +26,11 @@ const styles = {
 
 const ContentSwitch = ({item}: {item: ContentUnion}) => {
   if (item.type === 'image') {
-    return <Image src={getImagePath(item.src)} />
+    return Array.isArray(item.src) ? (
+      item.src.map(s => <Image src={getImagePath(s)} />)
+    ) : (
+      <Image src={getImagePath(item.src)} />
+    )
   } else if (item.type === 'video') {
     return <Video {...item} />
   } else if (item.type === 'audio') {
