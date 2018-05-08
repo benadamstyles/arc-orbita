@@ -6,6 +6,7 @@ import React, {Component, type ComponentType, type Node} from 'react'
 import {ServerStyleSheet} from 'styled-components'
 import yaml from 'js-yaml'
 import {getAllCategories} from './src/util/data'
+import typeof Data from './src/data/content.yml'
 
 type DocumentProps = {
   Html: ComponentType<*>,
@@ -45,7 +46,7 @@ export default {
   }),
 
   getRoutes: async () => {
-    const data = yaml.safeLoad(
+    const data: Data = yaml.safeLoad(
       await promisify(fs.readFile)('./src/data/content.yml')
     )
 
