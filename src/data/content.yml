@@ -366,6 +366,7 @@
   category: installations
   name: kgb
   src:
+    - installations/kgb-external.jpg
     - installations/kgb-1.jpg
     - installations/kgb-2.jpg
   videos:
@@ -374,6 +375,8 @@
   info:
     title: KGB Building in Riga, Latvia
     description: |
+      _External photo: Hans Jakobsson [@hjakse](https://twitter.com/hjakse)_
+
       The secret Soviet state police, the KGB, moved into this house in 1940 when the Soviet Union occupied Latvia for the first time and again in 1944. They left the building in 1991 after Latvia’s independence.
 
       A prison was established in the basement with 14 cells. The house was located on the corner of Lenin and Friedrich Engels Streets (the Soviet names), hence the name “The Corner House”.
@@ -408,6 +411,139 @@
   info:
     title: 2 Sonnets from Laputa
     description: Exhibited in 2015 at the Venice Bienniale
+
+- type: video
+  category: installations
+  name: signaling-pairs
+  src: https://www.youtube-nocookie.com/embed/fp9m2rmGKCs?rel=0&amp;showinfo=0
+  thumb: video-thumbs/signaling-pairs.jpg
+  backgroundColor: black
+  mainColor: rgb(14, 14, 14)
+  info:
+    title: Signaling Pairs, pilot exhibition, Riga
+    description: |
+      Exhibition by Artūrs Punte and Aleksey Grishchenko at [The Latvian Centre for Contemporary Art](https://www.lcca.lv), Rīga, July 2016
+
+      The installation is made up of small light diode screens. What is being portrayed can be understood if the viewer steps back, or by looking at the reflected image on the screen, which is reflected onto another specially prepared surface. The diodes can be perceived as the provider of the signal and the reflected image as a confirmation of receiving the signal.
+
+      **Video:** Oskars Broks
+
+- type: video
+  category: performances
+  name: soviet-retro-disco
+  src: https://www.youtube-nocookie.com/embed/x5oxMrjNGrI?rel=0&amp;showinfo=0
+  thumb: video-thumbs/soviet-retro-disco.jpg
+  backgroundColor: black
+  mainColor: rgb(185, 174, 115)
+  info:
+    title: Soviet Retro Disco
+    description: |
+      Reconstruction of a Soviet disco as an informative media.
+      Performance at Homo Alibi festival, August 2010.
+
+      **Authors:** Sergej Timofejev and Artur Punte
+      **Video:** Jegeny Sysojev
+
+- type: video
+  category: performances
+  name: arturs-punte-mala
+  src: https://www.youtube-nocookie.com/embed/owlXECNg5gs?rel=0&amp;showinfo=0
+  thumb: video-thumbs/arturs-punte-mala.jpg
+  backgroundColor: black
+  mainColor: rgb(185, 44, 48)
+  info:
+    title: Artūrs Punte @ MALA (Cēsis, Latvia)
+    description: |
+      Excerpts of a poetry reading @ MALA art space (Cesis, Latvia), November 2017
+      Voice processed through effect pedals (ZOOM G1X, Z-Cat Big Reverb, Logidy EPSi, Stagg looper etc.), Mogees sensor and modular synths (Erica Synths).
+
+      **Cameras:** Didzis Staris
+      **Video editing:** Uvis Leskavnieks
+      **Video background projection:** [Alexander Zolotov’s](http://www.warmplace.ru) application Pixilang
+  isCategorySample: true
+
+- type: video
+  category: videos
+  name: so-that-is-how
+  src: https://player.vimeo.com/video/155536291
+  thumb: video-thumbs/so-that-is-how.jpg
+  backgroundColor: black
+  mainColor: rgb(42, 46, 56)
+  info:
+    title: Artūrs Punte • So That is How...
+    description: One from the videoworks, which was included in 2005 in DVD “Orbita 4”.
+
+- type: video
+  category: performances
+  name: slow-show
+  src:
+    - https://player.vimeo.com/video/109638735
+    - https://www.youtube-nocookie.com/embed/Jjy5GBrJBPQ?rel=0&amp;showinfo=0
+  thumb: video-thumbs/slow-show.jpg
+  backgroundColor: black
+  mainColor: rgb(111, 110, 104)
+  info:
+    title: FM Slow Show
+    description: ''
+
+- type: video
+  category: performances
+  name: spam
+  src: https://player.vimeo.com/video/106407733
+  thumb: video-thumbs/spam.jpg
+  backgroundColor: black
+  mainColor: rgb(7, 6, 8)
+  info:
+    title: Semyon Khanin • Spam
+    description: |
+      A fragment of the performance “One Person Theater” as part of the “Survival Kit” festival.
+
+      **Operator:** Kristaps Epners
+      **Sound:** Andrei Eigus
+
+- type: video
+  category: performances
+  name: joe-dassin
+  src: https://player.vimeo.com/video/106381522
+  thumb: video-thumbs/joe-dassin.jpg
+  backgroundColor: black
+  mainColor: rgb(44, 42, 55)
+  info:
+    title: Sergei Timofeev • ‘Joe Dassin’
+    description: Orbita in Berlin, 2008. Sergei Timofeev reads ‘Joe Dassin’.
+
+- type: video
+  category: performances
+  name: place-usa
+  src: https://player.vimeo.com/video/104777678
+  thumb: video-thumbs/place-usa.jpg
+  backgroundColor: black
+  mainColor: rgb(126, 133, 135)
+  info:
+    title: 'Place: USA'
+    description: |
+      **Text:** Sergei Timofeev
+      **Music:** Andrew OID
+
+      The recording was made at one of the sessions of the project ‘The Poetic Map of Riga’, which took place in the new building of the Latvian National Library in the early summer of 2014.
+
+- type: video
+  category: performances
+  name: berlin-panda-theater
+  src:
+    - https://www.youtube-nocookie.com/embed/WUZbhQivrVA?rel=0&amp;showinfo=0
+    - https://www.youtube-nocookie.com/embed/IYRhudm-7-c?rel=0&amp;showinfo=0
+  thumb: video-thumbs/berlin-panda-theater.png
+  backgroundColor: black
+  mainColor: rgb(15, 4, 4)
+  info:
+    title: Orbita at the Berlin Panda Theater
+    description: |
+      Filmed during Orbita’s performance at the [Berlin Panda Theater](http://www.panda-theater.de/)
+      May 2010
+
+      1. Artur Punte reads ‘When the wind...’
+      2. Semion Khanin reads ‘From the bottom comes...’
 
 - type: image
   category: publications

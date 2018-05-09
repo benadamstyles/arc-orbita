@@ -7,6 +7,7 @@ export type Category =
   | 'online'
   | 'radio'
   | 'installations'
+  | 'performances'
 
 export type Video = $ReadOnly<{|
   type: 'video',
