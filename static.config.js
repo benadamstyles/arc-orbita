@@ -5,8 +5,10 @@ import fs from 'fs'
 import React, {Component, type ComponentType, type Node} from 'react'
 import {ServerStyleSheet} from 'styled-components'
 import yaml from 'js-yaml'
+import {maybe} from 'maybes'
 import {getAllCategories} from './src/util/data'
 import typeof Data from './src/data/content.yml'
+import typeof Statements from './src/data/category-statements.yml'
 
 type DocumentProps = {
   Html: ComponentType<*>,
@@ -50,6 +52,10 @@ export default {
       await promisify(fs.readFile)('./src/data/content.yml')
     )
 
+    const statements: Statements = yaml.safeLoad(
+      await promisify(fs.readFile)('./src/data/category-statements.yml')
+    )
+
     const categories = [...getAllCategories(data)]
 
     return [
@@ -67,11 +73,14 @@ export default {
 
         children: categories.map(category => {
           const items = data.filter(item => item.category === category)
+          const statement = maybe(statements.find(s => s.category === category))
+            .map(s => s.statement)
+            .orJust(null)
 
           return {
             path: category,
             component: 'src/pages/category',
-            getData: () => ({items}),
+            getData: () => ({items, statement}),
 
             children: items.map(item => ({
               path: item.name,

@@ -1,0 +1,10 @@
+// @flow
+
+import type {Category} from './content.yml'
+
+export type Statement = $ReadOnly<{
+  category: Category,
+  statement: string,
+}>
+
+declare module.exports: $ReadOnlyArray<Statement>
