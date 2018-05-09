@@ -75,11 +75,11 @@
 
 - type: image
   category: books
-  name: tal
+  name: talka
   src: tal.jpeg
   backgroundColor: rgb(241, 240, 238)
   info:
-    title: Tal
+    title: 'Talka Талка #1'
     description: ''
 
 - type: image
@@ -613,7 +613,7 @@
   src: contemporary-russian-poetry.jpg
   backgroundColor: rgb(160, 75, 11)
   info:
-    title: Contemporary Russian Poetry in Latvia
+    title: Contemporary Russian Poetry in Latvia, 1985-2006
     description: ''
   coverColor: white
   pages:
