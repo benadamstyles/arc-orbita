@@ -289,6 +289,40 @@
 
 - type: video
   category: installations
+  name: object-no-4
+  src: https://player.vimeo.com/video/125344450
+  thumb: video-thumbs/object-no-4.jpg
+  backgroundColor: black
+  mainColor: rgb(4, 4, 4)
+  info:
+    title: Artur Punte • Object No. 4
+    description: |
+      “One story for four voices ...”
+
+      Four storytellers, marked on the screen with color, vying with each other, collect the same story. As soon as one story overlaps with the speech of another narrator, the program gives the floor to him. The narrative lapses, endlessly joining together the most unexpected fragments to create a patchwork novella.
+
+      **Technical solution:** Tatyana Dubrovich
+      **Video:** Reinys Inkens
+
+- type: video
+  category: installations
+  name: object-no-5
+  src: https://player.vimeo.com/video/125344575
+  thumb: video-thumbs/object-no-5.jpg
+  backgroundColor: black
+  mainColor: rgb(4, 4, 4)
+  info:
+    title: Artur Punte • Object No. 5
+    description: |
+      “Copenhagen”
+
+      Apparatus for the reproduction of the urban sound-poetic landscape. When switched on, a three-channel half-hour composition is started, composed of urban, domestic noises and the voice of the narrator. The volume of each channel is regulated by a separate knob - you can, for example, listen to the entire song without text.
+
+      **Technical solution:** Екабс Волатовскис
+      **Video:** Reinys Inkens
+
+- type: video
+  category: installations
   name: right-kinetic-poem
   src: https://www.youtube-nocookie.com/embed/9biz1-l29Yk?rel=0&amp;showinfo=0
   thumb: video-thumbs/right.jpg
@@ -345,6 +379,22 @@
   info:
     title: Power Independent Poetry
     description: ''
+
+- type: video
+  category: installations
+  name: actual-spacescape
+  src: https://player.vimeo.com/video/175580614
+  thumb: video-thumbs/actual-spacescape.jpg
+  backgroundColor: black
+  mainColor: rgb(5, 5, 5)
+  info:
+    title: Actual Spacescape
+    description: |
+      *Installation at the Cesis Art Festival, 2016*
+
+      Automatic ticket printer, software, uncontrollable space probe
+
+      An unusual property of this automatic printer has been discovered: when connected to power, it starts to print out a series of statements that, as it turns out after a scrupulous analysis of the text, are most likely messages from a first-generation space probe, all contact with which has been lost for a long time. The messages are essentially descriptions of the spacescape and various interpretations thereof. You can receive a ticket in one of the four languages of operation and find out what the probe sees and describes at the specific moment.
 
 - type: video
   category: installations
@@ -544,6 +594,34 @@
 
       1. Artur Punte reads ‘When the wind...’
       2. Semion Khanin reads ‘From the bottom comes...’
+
+- type: video
+  category: performances
+  name: her-oil
+  src: https://player.vimeo.com/video/236400766
+  thumb: video-thumbs/her-oil.jpg
+  backgroundColor: black
+  mainColor: rgb(30, 28, 33)
+  info:
+    title: Sergej Timofejev • Her Oil
+    description: |
+      Performance at the “BBC Contains Strong Language” festival in Hull, UK, 2017.
+
+      **Translation:** Kevin M. F. Platt
+
+- type: video
+  category: performances
+  name: nice-place
+  src: https://player.vimeo.com/video/259649545
+  thumb: video-thumbs/nice-place.jpg
+  backgroundColor: black
+  mainColor: rgb(217, 199, 164)
+  info:
+    title: Jan Maksin (USA), Vladimir Svetlov & Sergej Timofejev at NicePlace, Riga, 2018
+    description: |
+      Two poems by Vladimir Svetlov and Sergej Timofejev, with music by Ian Maksin. From the performance on 8th March in Riga (at the NicePlace bookshop).
+
+      **Translation:** Kevin M. F. Platt
 
 - type: image
   category: publications
