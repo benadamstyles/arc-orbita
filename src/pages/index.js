@@ -34,27 +34,24 @@ class IntroContent extends PureComponent<{style: Object}, {range: number}> {
         {scroll => (
           <Spring native to={{scroll}}>
             {({scroll: s}) => (
-              console.log(this.state.range),
-              (
-                <animated.div
-                  // eslint-disable-next-line react-native/no-inline-styles
-                  style={{
-                    transformOrigin: 'top',
-                    ...this.props.style,
-                    opacity: s.interpolate({
-                      range: [0, this.state.range],
-                      output: [1, 0],
-                    }),
-                    transform: s.interpolate({
-                      range: [0, this.state.range],
-                      output: ['scale(1)', 'scale(0.9)'],
-                    }),
-                  }}>
-                  <Link to="/">
-                    <FeatureImg src={getImagePath('header.png')} />
-                  </Link>
-                </animated.div>
-              )
+              <animated.div
+                // eslint-disable-next-line react-native/no-inline-styles
+                style={{
+                  transformOrigin: 'top',
+                  ...this.props.style,
+                  opacity: s.interpolate({
+                    range: [0, this.state.range],
+                    output: [1, 0],
+                  }),
+                  transform: s.interpolate({
+                    range: [0, this.state.range],
+                    output: ['scale(1)', 'scale(0.9)'],
+                  }),
+                }}>
+                <Link to="/">
+                  <FeatureImg src={getImagePath('header.png')} />
+                </Link>
+              </animated.div>
             )}
           </Spring>
         )}
