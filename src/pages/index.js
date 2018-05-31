@@ -1,45 +1,76 @@
 // @flow
 
-import React, {Fragment} from 'react'
+import React, {PureComponent} from 'react'
 import styled from 'styled-components'
 import {maybe} from 'maybes'
 import {Link, RouteData} from 'react-static'
+import {Spring, animated} from 'react-spring'
 import Category from '../components/content/category'
 import DisplaceAbsolute from '../components/util/displace-absolute'
 import Page from '../components/layout/page'
+import ContentBackground from '../components/layout/content-background'
 import Global from '../components/meta/global'
-import {primaryColor} from '../constants/style/colors'
 import {getImagePath} from '../util/path'
 import {getItemImage} from '../util/item'
-
-// if (process.env.NODE_ENV !== 'production') {
-//   const {whyDidYouUpdate} = require('why-did-you-update')
-//   whyDidYouUpdate(React, {exclude: []})
-// }
+import ScrollEvent from '../components/util/scroll-event'
 
 const FeatureImg = styled.img`
   max-width: 100%;
+  padding-bottom: 4em;
 `
 
-const FeatureText = styled.p`
-  color: ${primaryColor};
-`
+class IntroContent extends PureComponent<{style: Object}, {range: number}> {
+  state = {
+    range: 250,
+  }
 
-export const Intro = DisplaceAbsolute(
-  'fixed',
-  ({style}) => (
-    <div style={style}>
-      <Link to="/">
-        <FeatureImg src={getImagePath('orbita-trans.png')} />
-      </Link>
-      <FeatureText>Orbita: The Project • Arc Publications 2018</FeatureText>
-    </div>
-  ),
-  {padding: '1rem'}
-)
+  componentDidMount() {
+    this.setState({range: window.document.body.offsetHeight / 8})
+  }
+
+  render() {
+    return (
+      <ScrollEvent>
+        {scroll => (
+          <Spring native to={{scroll}}>
+            {({scroll: s}) => (
+              console.log(this.state.range),
+              (
+                <animated.div
+                  // eslint-disable-next-line react-native/no-inline-styles
+                  style={{
+                    transformOrigin: 'top',
+                    ...this.props.style,
+                    opacity: s.interpolate({
+                      range: [0, this.state.range],
+                      output: [1, 0],
+                    }),
+                    transform: s.interpolate({
+                      range: [0, this.state.range],
+                      output: ['scale(1)', 'scale(0.9)'],
+                    }),
+                  }}>
+                  <Link to="/">
+                    <FeatureImg src={getImagePath('header.png')} />
+                  </Link>
+                </animated.div>
+              )
+            )}
+          </Spring>
+        )}
+      </ScrollEvent>
+    )
+  }
+}
+
+export const Intro = DisplaceAbsolute('fixed', IntroContent, {
+  padding: '1rem',
+  width: '100%',
+  textAlign: 'center',
+})
 
 const ContentWrapper = ({categories, sampleItems}) => (
-  <Fragment>
+  <ContentBackground>
     {categories.map((category, i, {length}) =>
       maybe(sampleItems[i])
         .map(firstItem => (
@@ -52,7 +83,7 @@ const ContentWrapper = ({categories, sampleItems}) => (
         ))
         .orJust(null)
     )}
-  </Fragment>
+  </ContentBackground>
 )
 
 const IndexPage = () => (

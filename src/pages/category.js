@@ -1,6 +1,6 @@
 // @flow
 
-import React, {Fragment} from 'react'
+import React from 'react'
 import Fade from 'react-reveal/Fade'
 import rapt from 'rapt'
 import {RouteData} from 'react-static'
@@ -9,6 +9,7 @@ import {maybe} from 'maybes'
 import typeof Data from '../data/content.yml'
 import Thumb from '../components/content/thumb'
 import Page from '../components/layout/page'
+import ContentBackground from '../components/layout/content-background'
 import Global from '../components/meta/global'
 import {getImagePath} from '../util/path'
 import {getItemImage} from '../util/item'
@@ -23,7 +24,7 @@ const Statement = styled.p`
 `
 
 const ContentWrapper = ({items, statement}) => (
-  <Fragment>
+  <ContentBackground>
     {maybe(statement)
       .map(s => <Statement>{s}</Statement>)
       .orJust(null)}
@@ -45,7 +46,7 @@ const ContentWrapper = ({items, statement}) => (
         ))
         .val()
     )}
-  </Fragment>
+  </ContentBackground>
 )
 
 const CategoryPage = () => (
