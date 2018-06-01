@@ -326,7 +326,7 @@
   name: right-kinetic-poem
   src: https://www.youtube-nocookie.com/embed/9biz1-l29Yk?rel=0&amp;showinfo=0
   thumb: video-thumbs/right.jpg
-  backgroundColor: white
+  backgroundColor: black
   mainColor: rgb(142, 142, 133)
   info:
     title: Right, kinetic poem
