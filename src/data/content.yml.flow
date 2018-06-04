@@ -52,6 +52,7 @@ export type Audio = $ReadOnly<{|
     title: string,
     description: string,
   },
+  videos?: $ReadOnlyArray<string>,
   isCategorySample?: true,
 |}>
 

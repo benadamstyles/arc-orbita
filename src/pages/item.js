@@ -102,7 +102,7 @@ class ItemPage extends PureComponent<Props, State> {
             )
             .orJust(null)}
 
-        {item.type === 'image' &&
+        {(item.type === 'image' || item.type === 'audio') &&
           maybe(item.videos)
             .map(videos =>
               videos.map(video => (
