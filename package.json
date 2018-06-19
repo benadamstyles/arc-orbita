@@ -21,7 +21,9 @@
     "glow": "glow --watch !node_modules/*",
     "flow-typed": "flow-typed install --skip",
     "lint": "eslint .",
-    "test": "yarn lint && yarn flow && yarn build"
+    "test": "yarn lint && yarn flow && yarn build",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
     "fluture": "^8.0.2",
@@ -40,7 +42,8 @@
     "react-static": "^5.7.3",
     "recompose": "^0.27.0",
     "set-future-state": "^0.2.5",
-    "styled-components": "^3.2.0"
+    "styled-components": "^3.2.0",
+    "snyk": "^1.83.0"
   },
   "devDependencies": {
     "@iml/flow-highland": "^4.3.0",
@@ -79,5 +82,6 @@
     },
     "src": "dist",
     "dest": ""
-  }
+  },
+  "snyk": true
 }
