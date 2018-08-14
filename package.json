@@ -66,7 +66,7 @@
     "highland": "^2.13.0",
     "js-yaml": "^3.11.0",
     "prettier": "^1.12.0",
-    "serve": "^6.5.5",
+    "serve": "^9.6.0",
     "sitemap-urls": "^3.0.0",
     "upload-site": "^1.0.0",
     "why-did-you-update": "^0.1.1"
