@@ -24,7 +24,7 @@
     "test": "yarn lint && yarn flow && yarn build"
   },
   "dependencies": {
-    "fluture": "^8.0.2",
+    "fluture": "^10.1.0",
     "lodash": "^4.17.5",
     "maybes": "^0.2.3",
     "rapt": "^1.2.0",
