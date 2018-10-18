@@ -40,7 +40,7 @@
     "react-static": "^5.7.3",
     "recompose": "^0.27.0",
     "set-future-state": "^0.2.5",
-    "styled-components": "^3.2.0"
+    "styled-components": "^4.0.2"
   },
   "devDependencies": {
     "@iml/flow-highland": "^4.3.0",
