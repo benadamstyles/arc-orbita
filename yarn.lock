@@ -2238,6 +2238,13 @@ concurrify@^1.0.0:
     sanctuary-type-classes "^8.0.0"
     sanctuary-type-identifiers "^2.0.0"
 
+concurrify@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/concurrify/-/concurrify-1.1.1.tgz#e903b6500b2ce9af7ac51bd5f2161f8db33cfb41"
+  dependencies:
+    sanctuary-show "^1.0.0"
+    sanctuary-type-identifiers "^2.0.0"
+
 config-chain@^1.1.11, config-chain@~1.1.11:
   version "1.1.11"
   resolved "https://registry.yarnpkg.com/config-chain/-/config-chain-1.1.11.tgz#aba09747dfbe4c3e70e766a6e41586e1859fc6f2"
@@ -3890,6 +3897,14 @@ flush-write-stream@^1.0.0:
   dependencies:
     inherits "^2.0.1"
     readable-stream "^2.0.4"
+
+fluture@^10.2.0:
+  version "10.2.0"
+  resolved "https://registry.yarnpkg.com/fluture/-/fluture-10.2.0.tgz#7b5117deb7c056fb781e4ecb4655a4454a192335"
+  dependencies:
+    concurrify "^1.1.1"
+    sanctuary-show "^1.0.0"
+    sanctuary-type-identifiers "^2.0.0"
 
 fluture@^8.0.2:
   version "8.0.2"
@@ -8340,6 +8355,10 @@ safe-regex@^1.1.0:
 safer-buffer@^2.1.0:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
+
+sanctuary-show@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/sanctuary-show/-/sanctuary-show-1.0.0.tgz#72deb4812f9decec850e03286807dca1c97a1d61"
 
 sanctuary-type-classes@^8.0.0:
   version "8.1.1"
