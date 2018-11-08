@@ -69,7 +69,7 @@
     "serve": "^6.5.5",
     "sitemap-urls": "^3.0.0",
     "upload-site": "^1.0.0",
-    "why-did-you-update": "^0.1.1"
+    "why-did-you-update": "^1.0.3"
   },
   "upload-site": {
     "auth": {
