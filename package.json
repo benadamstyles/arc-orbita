@@ -21,16 +21,18 @@
     "glow": "glow --watch !node_modules/*",
     "flow-typed": "flow-typed install --skip",
     "lint": "eslint .",
-    "test": "yarn lint && yarn flow && yarn build"
+    "test": "yarn lint && yarn flow && yarn build",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "fluture": "^8.0.2",
     "lodash": "^4.17.5",
     "maybes": "^0.2.3",
     "rapt": "^1.2.0",
-    "react": "^16.2.0",
+    "react": "^16.3.1",
     "react-audio-player": "^0.10.0",
-    "react-dom": "^16.2.0",
+    "react-dom": "^16.3.3",
     "react-flip-page": "^0.16.0",
     "react-hot-loader": "^4.0.1",
     "react-markdown": "^3.3.0",
@@ -40,7 +42,8 @@
     "react-static": "^5.7.3",
     "recompose": "^0.27.0",
     "set-future-state": "^0.2.5",
-    "styled-components": "^3.2.0"
+    "styled-components": "^3.2.5",
+    "snyk": "^1.116.2"
   },
   "devDependencies": {
     "@iml/flow-highland": "^4.3.0",
@@ -79,5 +82,6 @@
     },
     "src": "dist",
     "dest": ""
-  }
+  },
+  "snyk": true
 }
