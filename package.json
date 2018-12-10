@@ -45,7 +45,7 @@
   "devDependencies": {
     "@iml/flow-highland": "^4.3.0",
     "babel-eslint": "^8.2.2",
-    "babel-plugin-styled-components": "^1.3.0",
+    "babel-plugin-styled-components": "^1.9.3",
     "convexqr": "^0.0.4",
     "eslint": "^4.18.2",
     "eslint-config-mealsup": "^2.1.0",
