@@ -3244,15 +3244,17 @@ eslint-config-airbnb@16.1.0:
   dependencies:
     eslint-config-airbnb-base "^12.1.0"
 
-eslint-config-mealsup@^2.1.0:
-  version "2.5.2"
-  resolved "https://registry.yarnpkg.com/eslint-config-mealsup/-/eslint-config-mealsup-2.5.2.tgz#1120c34efb34726b8a916487638d93d0e103df21"
+eslint-config-mealsup@^2.7.1:
+  version "2.7.1"
+  resolved "https://registry.yarnpkg.com/eslint-config-mealsup/-/eslint-config-mealsup-2.7.1.tgz#b0a1f205b5f26e25e3045ff18df09ae3ee93135d"
+  integrity sha512-oLfq5UNWUJza2oHgEsVOUQ6IYKMK5AEQ5PCfFX+2WclMgcYWwu+gU6EzB5X7bH/PG1X6oAw/9u6bIL8XZ2obVg==
   dependencies:
-    eslint-config-rapt "^1.4.1"
+    eslint-config-rapt "^1.5.3"
 
-eslint-config-rapt@^1.4.1:
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/eslint-config-rapt/-/eslint-config-rapt-1.4.1.tgz#26174da07d769dc9fa4008e508908738fa0fb779"
+eslint-config-rapt@^1.5.3:
+  version "1.5.3"
+  resolved "https://registry.yarnpkg.com/eslint-config-rapt/-/eslint-config-rapt-1.5.3.tgz#177a09d0151a1b52c0c72241073c9cac81bccb01"
+  integrity sha512-NeDJxJ+pRkoBHdeR9f34z9ydk9L2o+KIU5Iwi850gg4EcnhwDEtevZKZXxBJcFiTOMR8Eno/W1uEOPfh2sqE6A==
 
 eslint-config-react-tools@^1.2.3:
   version "1.2.5"
