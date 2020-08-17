@@ -25,7 +25,7 @@
   },
   "dependencies": {
     "fluture": "^8.0.2",
-    "lodash": "^4.17.16",
+    "lodash": "^4.17.20",
     "maybes": "^0.2.3",
     "rapt": "^1.2.0",
     "react": "^16.2.0",
