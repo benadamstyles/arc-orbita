@@ -28,9 +28,9 @@
     "lodash": "^4.17.20",
     "maybes": "^0.2.3",
     "rapt": "^1.2.0",
-    "react": "^16.2.0",
+    "react": "^16.5.0",
     "react-audio-player": "^0.10.0",
-    "react-dom": "^16.2.0",
+    "react-dom": "^16.5.0",
     "react-flip-page": "^0.16.0",
     "react-hot-loader": "^4.0.1",
     "react-markdown": "^3.3.0",
@@ -40,7 +40,7 @@
     "react-static": "^5.7.3",
     "recompose": "^0.27.0",
     "set-future-state": "^0.2.5",
-    "styled-components": "^3.2.0"
+    "styled-components": "^4.0.0"
   },
   "devDependencies": {
     "@iml/flow-highland": "^4.3.0",
